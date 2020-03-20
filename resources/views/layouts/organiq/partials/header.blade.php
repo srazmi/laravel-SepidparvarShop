@@ -1,471 +1,317 @@
-<div id="header">
-    <!-- Top Bar Start-->
-    <nav id="top" class="htop">
-      <div class="container">
-        <div class="row"> <span class="drop-icon visible-sm visible-xs"><i class="fa fa-align-justify"></i></span>
-          <div class="pull-left flip left-top">
-            <div class="links">
-              <ul>
-                <li class="mobile"><i class="fa fa-phone"></i>+21 9898777656</li>
-                <li class="email"><a href="mailto:info@marketshop.com"><i class="fa fa-envelope"></i>info@marketshop.com</a></li>
-                <li class="wrap_custom_block hidden-sm hidden-xs"><a>بلاک سفارشی<b></b></a>
-                  <div class="dropdown-menu custom_block">
-                    <ul>
-                      <li>
-                        <table>
-                          <tbody>
-                            <tr>
-                              <td><img alt="" src="image/banner/cms-block.jpg"></td>
-                              <td><img alt="" src="image/banner/responsive.jpg"></td>
-                            </tr>
-                            <tr>
-                              <td><h4>بلاک های محتوا</h4></td>
-                              <td><h4>قالب واکنش گرا</h4></td>
-                            </tr>
-                            <tr>
-                              <td>این یک بلاک مدیریت محتواست. شما میتوانید هر نوع محتوای html نوشتاری یا تصویری را در آن قرار دهید.</td>
-                              <td>این یک بلاک مدیریت محتواست. شما میتوانید هر نوع محتوای html نوشتاری یا تصویری را در آن قرار دهید.</td>
-                            </tr>
-                            <tr>
-                              <td><strong><a class="btn btn-default btn-sm" href="#">ادامه مطلب</a></strong></td>
-                              <td><strong><a class="btn btn-default btn-sm" href="#">ادامه مطلب</a></strong></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li><a href="#">لیست علاقه مندی (0)</a></li>
-                <li><a href="checkout.html">تسویه حساب</a></li>
+<div class="top-header bg_gray">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-7">
+              <ul class="contact_detail border_list list_none text-center text-md-left">
+                  <li><a href="#"><i class="ti-mobile"></i> <span>0211234567</span></a></li>
+                  <li><a href="#"><i class="ti-email"></i> <span>info@gmail.com</span></a></li>
               </ul>
-            </div>
-            <div id="language" class="btn-group">
-              <button class="btn-link dropdown-toggle" data-toggle="dropdown"> <span> <img src="image/flags/gb.png" alt="انگلیسی" title="انگلیسی">انگلیسی <i class="fa fa-caret-down"></i></span></button>
-              <ul class="dropdown-menu">
-                <li>
-                  <button class="btn btn-link btn-block language-select" type="button" name="GB"><img src="image/flags/gb.png" alt="انگلیسی" title="انگلیسی" /> انگلیسی</button>
-                </li>
-                <li>
-                  <button class="btn btn-link btn-block language-select" type="button" name="GB"><img src="image/flags/ar.png" alt="عربی" title="عربی" /> عربی</button>
-                </li>
-              </ul>
-            </div>
-            <div id="currency" class="btn-group">
-              <button class="btn-link dropdown-toggle" data-toggle="dropdown"> <span> تومان <i class="fa fa-caret-down"></i></span></button>
-              <ul class="dropdown-menu">
-                <li>
-                  <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button>
-                </li>
-                <li>
-                  <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound Sterling</button>
-                </li>
-                <li>
-                  <button class="currency-select btn btn-link btn-block" type="button" name="USD">$ USD</button>
-                </li>
-              </ul>
-            </div>
           </div>
-          <div id="top-links" class="nav pull-right flip">
-            <ul>
-              <li><a href="login.html">ورود</a></li>
-              <li><a href="register.html">ثبت نام</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Top Bar End-->
-    <!-- Header Start-->
-    <header class="header-row">
-      <div class="container">
-        <div class="table-container">
-          <!-- Logo Start -->
-          <div class="col-table-cell col-lg-4 col-md-4 col-sm-12 col-xs-12 inner">
-            <div id="logo"><a href="index.html"><img class="img-responsive" src="image/logo.png" title="MarketShop" alt="MarketShop" /></a></div>
-          </div>
-          <!-- Logo End -->
-          <!-- جستجو Start-->
-          <div class="col-table-cell col-lg-5 col-md-5 col-md-push-0 col-sm-6 col-sm-push-6 col-xs-12">
-            <div id="search" class="input-group">
-              <input id="filter_name" type="text" name="search" value="" placeholder="جستجو" class="form-control input-lg" />
-              <button type="button" class="button-search"><i class="fa fa-search"></i></button>
-            </div>
-          </div>
-          <!-- جستجو End-->
-          <!-- Mini Cart Start-->
-          <div class="col-table-cell col-lg-3 col-md-3 col-md-pull-0 col-sm-6 col-sm-pull-6 col-xs-12 inner">
-            <div id="cart">
-              <button type="button" data-toggle="dropdown" data-loading-text="بارگذاری ..." class="heading dropdown-toggle"> <span class="cart-icon pull-left flip"></span> <span id="cart-total">2 آیتم - 132000 تومان</span></button>
-              <ul class="dropdown-menu">
-                <li>
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td class="text-center"><a href="product.html"><img class="img-thumbnail" title="کفش راحتی مردانه" alt="کفش راحتی مردانه" src="image/product/sony_vaio_1-50x50.jpg"></a></td>
-                        <td class="text-left"><a href="product.html">کفش راحتی مردانه</a></td>
-                        <td class="text-right">x 1</td>
-                        <td class="text-right">32000 تومان</td>
-                        <td class="text-center"><button class="btn btn-danger btn-xs remove" title="حذف" onClick="" type="button"><i class="fa fa-times"></i></button></td>
-                      </tr>
-                      <tr>
-                        <td class="text-center"><a href="product.html"><img class="img-thumbnail" title="تبلت ایسر" alt="تبلت ایسر" src="image/product/samsung_tab_1-50x50.jpg"></a></td>
-                        <td class="text-left"><a href="product.html">تبلت ایسر</a></td>
-                        <td class="text-right">x 1</td>
-                        <td class="text-right">98000 تومان</td>
-                        <td class="text-center"><button class="btn btn-danger btn-xs remove" title="حذف" onClick="" type="button"><i class="fa fa-times"></i></button></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </li>
-                <li>
-                  <div>
-                    <table class="table table-bordered">
-                      <tbody>
-                        <tr>
-                          <td class="text-right"><strong>جمع کل</strong></td>
-                          <td class="text-right">132000 تومان</td>
-                        </tr>
-                        <tr>
-                          <td class="text-right"><strong>کسر هدیه</strong></td>
-                          <td class="text-right">4000 تومان</td>
-                        </tr>
-                        <tr>
-                          <td class="text-right"><strong>مالیات</strong></td>
-                          <td class="text-right">11880 تومان</td>
-                        </tr>
-                        <tr>
-                          <td class="text-right"><strong>قابل پرداخت</strong></td>
-                          <td class="text-right">139880 تومان</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p class="checkout"><a href="cart.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> مشاهده سبد</a>&nbsp;&nbsp;&nbsp;<a href="checkout.html" class="btn btn-primary"><i class="fa fa-share"></i> تسویه حساب</a></p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Mini Cart End-->
-        </div>
-      </div>
-    </header>
-    <!-- Header End-->
-    <!-- Main آقایانu Start-->
-    <nav id="menu" class="navbar">
-      <div class="container">
-        <div class="navbar-header"> <span class="visible-xs visible-sm"> منو <b></b></span></div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a class="home_link" title="خانه" href="index.html"><span>خانه</span></a></li>
-            <li class="dropdown"><a>خرید بر اساس دسته بندی</a>
-              <div class="dropdown-menu">
-                <ul>
-                  <li> <a href="category.html">البسه<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li><a href="category.html">آقایان <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته ها</a></li>
-                              <li><a href="category.html">زیردسته ها</a></li>
-                              <li><a href="category.html">زیردسته ها</a></li>
-                              <li><a href="category.html">زیردسته ها</a></li>
-                              <li><a href="category.html">زیردسته جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html" >بانوان</a> </li>
-                        <li><a href="category.html">دخترانه<span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته ها </a></li>
-                              <li><a href="category.html">زیردسته جدید</a></li>
-                              <li><a href="category.html">زیردسته جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">پسرانه</a></li>
-                        <li><a href="category.html">نوزاد</a></li>
-                        <li><a href="category.html">لوازم <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">الکترونیکی<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li> <a href="category.html">لپ تاپ <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li> <a href="category.html">زیردسته های جدید </a> </li>
-                              <li> <a href="category.html">زیردسته های جدید </a> </li>
-                              <li> <a href="category.html">زیردسته جدید </a> </li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li> <a href="category.html">رومیزی <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li> <a href="category.html">زیردسته های جدید </a> </li>
-                              <li> <a href="category.html">زیردسته جدید </a> </li>
-                              <li> <a href="category.html">زیردسته جدید </a> </li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li> <a href="category.html">دوربین <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li> <a href="category.html">زیردسته های جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">موبایل و تبلت <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید</a></li>
-                              <li><a href="category.html">زیردسته های جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">صوتی و تصویری <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید </a> </li>
-                              <li><a href="category.html">زیردسته جدید </a> </li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">لوازم خانگی</a> </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li><a href="category.html">کفش<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li><a href="category.html">آقایان</a> </li>
-                        <li><a href="category.html">بانوان <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید </a> </li>
-                              <li><a href="category.html">زیردسته ها </a> </li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">دخترانه</a> </li>
-                        <li><a href="category.html">پسرانه</a> </li>
-                        <li><a href="category.html">نوزاد</a> </li>
-                        <li><a href="category.html">لوازم <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید</a></li>
-                              <li><a href="category.html">زیردسته های جدید</a></li>
-                              <li><a href="category.html">زیردسته ها</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">ساعت<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li> <a href="category.html">ساعت مردانه</a></li>
-                        <li> <a href="category.html">ساعت زنانه</a></li>
-                        <li> <a href="category.html">ساعت بچگانه</a></li>
-                        <li> <a href="category.html">لوازم</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">جواهرات<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li> <a href="category.html">نقره <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li> <a href="category.html">زیردسته های جدید</a></li>
-                              <li> <a href="category.html">زیردسته های جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">طلا <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">تست 1</a></li>
-                              <li><a href="category.html">تست 2</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">الماس</a></li>
-                        <li><a href="category.html">مروارید <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">زیورآلات آقایان</a></li>
-                        <li><a href="category.html">زیورآلات کودکان <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">زیردسته های جدید </a> </li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li><a href="category.html">زیبایی و سلامت<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li> <a href="category.html">عطر و ادکلن</a></li>
-                        <li> <a href="category.html">آرایشی</a></li>
-                        <li> <a href="category.html">ضد آفتاب</a></li>
-                        <li> <a href="category.html">مراقبت از پوست</a></li>
-                        <li> <a href="category.html">مراقبت از چشم</a></li>
-                        <li> <a href="category.html">مراقبت از مو</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">کودک و نوزاد<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li><a href="category.html">اسباب بازی</a></li>
-                        <li><a href="category.html">بازی <span>&rsaquo;</span></a>
-                          <div class="dropdown-menu">
-                            <ul>
-                              <li><a href="category.html">تست 25</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                        <li><a href="category.html">پازل</a></li>
-                        <li><a href="category.html">سرگرمی</a></li>
-                        <li><a href="category.html">متنوع</a></li>
-                        <li><a href="category.html">سلامت و امنیت</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">ورزشی<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li><a href="category.html">دوچرخه سواری</a></li>
-                        <li><a href="category.html">دویدن</a></li>
-                        <li><a href="category.html">شنا</a></li>
-                        <li><a href="category.html">فوتبال</a></li>
-                        <li><a href="category.html">گلف</a></li>
-                        <li><a href="category.html">موج سواری</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">خانه و باغچه<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li><a href="category.html">لوازم خواب</a></li>
-                        <li><a href="category.html">خوراک</a></li>
-                        <li><a href="category.html">لوازم منزل</a></li>
-                        <li><a href="category.html">آشپزخانه</a></li>
-                        <li><a href="category.html">روشنایی</a></li>
-                        <li><a href="category.html">ابزارها</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li> <a href="category.html">خوراک<span>&rsaquo;</span></a>
-                    <div class="dropdown-menu">
-                      <ul>
-                        <li><a href="category.html">نوشیدنی</a></li>
-                        <li><a href="category.html">تنقلات</a></li>
-                        <li><a href="category.html">میان وعده</a></li>
-                        <li><a href="category.html">خشک بار</a></li>
-                        <li><a href="category.html">شکلات</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="menu_brands dropdown"><a href="#">برند ها</a>
-              <div class="dropdown-menu">
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/apple_logo-60x60.jpg" title="اپل" alt="اپل" /></a><a href="#">اپل</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/canon_logo-60x60.jpg" title="کنون" alt="کنون" /></a><a href="#">کنون</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"> <a href="#"><img src="image/product/hp_logo-60x60.jpg" title="اچ پی" alt="اچ پی" /></a><a href="#">اچ پی</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/htc_logo-60x60.jpg" title="اچ تی سی" alt="اچ تی سی" /></a><a href="#">اچ تی سی</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/palm_logo-60x60.jpg" title="پالم" alt="پالم" /></a><a href="#">پالم</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/sony_logo-60x60.jpg" title="سونی" alt="سونی" /></a><a href="#">سونی</a> </div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/canon_logo-60x60.jpg" title="test" alt="test" /></a><a href="#">تست</a> </div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/apple_logo-60x60.jpg" title="test 3" alt="test 3" /></a><a href="#">تست 3</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/canon_logo-60x60.jpg" title="test 5" alt="test 5" /></a><a href="#">تست 5</a> </div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/canon_logo-60x60.jpg" title="test 6" alt="test 6" /></a><a href="#">تست 6</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/apple_logo-60x60.jpg" title="test 7" alt="test 7" /></a><a href="#">تست 7</a> </div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/canon_logo-60x60.jpg" title="test1" alt="test1" /></a><a href="#">تست1</a></div>
-                <div class="col-lg-1 col-md-2 col-sm-3 col-xs-6"><a href="#"><img src="image/product/apple_logo-60x60.jpg" title="test2" alt="test2" /></a><a href="#">تست2</a></div>
-              </div>
-            </li>
-            <li class="custom-link"><a href="#">لینک های دلخواه</a></li>
-            <li class="dropdown wrap_custom_block hidden-sm hidden-xs"><a>بلاک سفارشی</a>
-              <div class="dropdown-menu custom_block">
-                <ul>
+          <div class="col-md-5">
+              <ul class="header_list border_list list_none header_dropdown text-center text-md-right">
                   <li>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td><img alt="" src="image/banner/cms-block.jpg"></td>
-                          <td><img alt="" src="image/banner/responsive.jpg"></td>
-                          <td><img alt="" src="image/banner/cms-block.jpg"></td>
-                        </tr>
-                        <tr>
-                          <td><h4>بلاک های محتوا</h4></td>
-                          <td><h4>قالب واکنش گرا</h4></td>
-                          <td><h4>پشتیبانی ویژه</h4></td>
-                        </tr>
-                        <tr>
-                          <td>این یک بلاک مدیریت محتواست. شما میتوانید هر نوع محتوای html نوشتاری یا تصویری را در آن قرار دهید.</td>
-                          <td>این یک بلاک مدیریت محتواست. شما میتوانید هر نوع محتوای html نوشتاری یا تصویری را در آن قرار دهید.</td>
-                          <td>این یک بلاک مدیریت محتواست. شما میتوانید هر نوع محتوای html نوشتاری یا تصویری را در آن قرار دهید.</td>
-                        </tr>
-                        <tr>
-                          <td><strong><a class="btn btn-primary btn-sm" href="#">ادامه مطلب</a></strong></td>
-                          <td><strong><a class="btn btn-primary btn-sm" href="#">ادامه مطلب</a></strong></td>
-                          <td><strong><a class="btn btn-primary btn-sm" href="#">ادامه مطلب</a></strong></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                      <div class="custome_dropdown">
+                          <select name="countries" class="custome_select">
+                              <option value="en" data-title="English">انگلیسی</option>
+                              <option value="fn" data-title="France">فرانسه</option>
+                              <option value="us" data-title="United States">عربی</option>
+                          </select>
+                      </div>
                   </li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown information-link"><a>برگه ها</a>
-              <div class="dropdown-menu">
-                <ul>
-                  <li><a href="login.html">ورود</a></li>
-                  <li><a href="register.html">ثبت نام</a></li>
-                  <li><a href="category.html">دسته بندی (شبکه/لیست)</a></li>
-                  <li><a href="product.html">محصولات</a></li>
-                  <li><a href="cart.html">سبد خرید</a></li>
-                  <li><a href="checkout.html">تسویه حساب</a></li>
-                  <li><a href="compare.html">مقایسه</a></li>
-                  <li><a href="wishlist.html">لیست آرزو</a></li>
-                  <li><a href="search.html">جستجو</a></li>
-                </ul>
-                <ul>
-                  <li><a href="about-us.html">درباره ما</a></li>
-                  <li><a href="404.html">404</a></li>
-                  <li><a href="elements.html">عناصر</a></li>
-                  <li><a href="faq.html">سوالات متداول</a></li>
-                  <li><a href="sitemap.html">نقشه سایت</a></li>
-                  <li><a href="contact-us.html">تماس با ما</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="contact-link"><a href="contact-us.html">تماس با ما</a></li>
-            <li class="custom-link-right"><a href="#" target="_blank">پیشنهاد های ویژه</a></li>
-          </ul>
-        </div>
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" href="#" data-toggle="dropdown">پروفایل کاربری</a>
+                      <div class="dropdown-menu shadow dropdown-menu-right">
+                          <ul>
+                              <li><a class="dropdown-item" href="my-account.html">پروفایل کاربری</a></li>
+                              <li><a class="dropdown-item" href="wishlist.html">لیست علاقه مندی</a></li>
+                              <li><a class="dropdown-item" href="checkout.html">سبد خرید</a></li>
+                          </ul>
+                      </div>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </nav>
-    <!-- Main آقایانu End-->
   </div>
+</div>
+<div class="container">
+  <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html">
+          <img class="logo_light" src="assets/images/logo_white.png" alt="آرم">
+          <img class="logo_dark" src="assets/images/logo_dark.png" alt="آرم">
+          <img class="logo_default" src="assets/images/logo_dark.png" alt="آرم">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="ناوبری را تغییر دهید"><span
+              class="ion-android-menu"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+              <li class="dropdown">
+                  <a class="dropdown-toggle nav-link active" href="#" data-toggle="dropdown">صفحه اصلی</a>
+                  <div class="dropdown-menu">
+                      <ul>
+                          <li><a class="dropdown-item nav-link nav_item active" href="index.html">صفحه اصلی 1</a>
+                          </li>
+                          <li><a class="dropdown-item nav-link nav_item" href="index-2.html">صفحه اصلی 2</a></li>
+                          <li><a class="dropdown-item nav-link nav_item" href="index-3.html">صفحه اصلی 3</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                  <a class="nav-link" href="about.html">درباره ما</a>
+              </li>
+              <li class="dropdown dropdown-mega-menu">
+                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">فروشگاه</a>
+                  <div class="dropdown-menu">
+                      <ul class="mega-menu d-lg-flex">
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li class="dropdown-header">صفحه فروشگاه</li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-list-view.html">لیست فروشگاه</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-grid-view.html">لیست عمودی فروشگاه</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-three-columns.html">فروشگاه سه ستون</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-four-columns.html">فروشگاه دو ستون</a></li>
+                              </ul>
+                          </li>
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li class="dropdown-header">جزییات محصول</li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="product-detail.html">جزییات محصول</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item"
+                                         href="product-detail-left-sidebar.html">محصول سایدبار چپ</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item"
+                                         href="product-detail-right-sidebar.html">محصول سایدبار راست</a></li>
+                              </ul>
+                          </li>
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li class="dropdown-header">صفحات</li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="cart.html">سبد خرید</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="checkout.html">پرداخت</a>
+                                  </li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="wishlist.html">لیست علاقه مندی</a>
+                                  </li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="my-account.html">پروفایل کاربری</a></li>
+                              </ul>
+                          </li>
+                          <li class="mega-menu-col col-lg-3">
+                              <div class="ads_banner">
+                                  <a href="#"><img src="assets/images/mega_menu_ads.jpg" alt="mega_menu_ads"></a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">وبلاگ</a>
+                  <div class="dropdown-menu">
+                      <ul>
+                          <li>
+                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">چیدمان وبلاگ</a>
+                              <div class="dropdown-menu">
+                                  <ul>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-standard-fullwidth.html">وبلاگ تمام صفحه</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-standard-left-sidebar.html">وبلاگ کناری چپ</a>
+                                      </li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-standard-right-sidebar.html">وبلاگ کناری راست</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-three-columns.html">وبلاگ سه ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-four-columns.html">وبلاگ چهار ستون</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li>
+                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">چیدمان وبلاگ</a>
+                              <div class="dropdown-menu">
+                                  <ul>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-masonry-three-columns.html">وبلاگ سه ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-masonry-four-columns.html">وبلاگ چهار ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-masonry-three-columns-wide.html">وبلاگ سه ستون تمام عرض</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-masonry-four-columns-wide.html">وبلاگ چهار ستون تمام عرض</a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li>
+                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">لیست پست ها</a>
+                              <div class="dropdown-menu">
+                                  <ul>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-list-left-sidebar.html"></a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-list-right-sidebar.html">پست عمودی</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li>
+                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">پست تکی</a>
+                              <div class="dropdown-menu">
+                                  <ul>
+                                      <li><a class="dropdown-item nav-link nav_item" href="blog-single.html">پیشفرض</a>
+                                      </li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-single-left-sidebar.html">سایدبارچپ</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-single-right-sidebar.html">سایدبار راست</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-single-slider.html">پست کناری</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-single-video.html">ویدئو پست</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="blog-single-audio.html">پست صوتی</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">صفحات</a>
+                  <div class="dropdown-menu">
+                      <ul>
+                          <li><a class="dropdown-item nav-link nav_item" href="team.html">تیم ما</a></li>
+                          <li><a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">گالری</a>
+                              <div class="dropdown-menu">
+                                  <ul>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-three-columns.html">گالری سه ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-four-columns.html">گالری دو ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-three-columns-wide.html">گالری سه ستون تمام عرض</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-four-columns-wide.html">گالری چهار ستون تمام عرض</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-masonry-three-columns.html">گالری سه ستون تمام عرض</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-masonry-four-columns.html">گالری چهار ستون تمام عرض</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-masonry-three-columns-wide.html">گالری سه ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item"
+                                             href="gallery-masonry-four-columns-wide.html">گالری چهار ستون</a></li>
+                                      <li><a class="dropdown-item nav-link nav_item" href="gallery-detail.html">جزییات گالری</a></li>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li><a class="dropdown-item nav-link nav_item" href="faq.html">پرسش پاسخ</a></li>
+                          <li><a class="dropdown-item nav-link nav_item" href="coming-soon.html">صفحه به زودی</a>
+                          </li>
+                          <li><a class="dropdown-item nav-link nav_item" href="404.html">صفحه 404</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="dropdown dropdown-mega-menu">
+                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">المان ها</a>
+                  <div class="dropdown-menu">
+                      <ul class="mega-menu d-lg-flex">
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li><a class="dropdown-item nav-link nav_item" href="accordions.html"><i
+                                          class="ti-layout-accordion-separated"></i>  آکاردئونها</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="blockquotes.html"><i
+                                          class="ti-quote-left"></i>  بلاک ها</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="buttons.html"><i
+                                          class="ti-mouse"></i>  دکمه ها</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="call-to-action.html"><i
+                                          class="ti-headphone-alt"></i>  فراخوانی برای اقدام</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="carousel.html"><i
+                                          class="ti-layout-slider"></i>  چرخ فلک</a></li>
+                              </ul>
+                          </li>
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li><a class="dropdown-item nav-link nav_item" href="colors.html"><i
+                                          class="ti-paint-bucket"></i> رنگ ها</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="columns.html"><i
+                                          class="ti-layout-column3-alt"></i> ستون</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="countdown.html"><i
+                                          class="ti-alarm-clock"></i> شمارش معکوس</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="counter.html"><i
+                                          class="ti-timer"></i> پیشخوان</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="heading.html"><i
+                                          class="ti-text"></i> سرفصل</a></li>
+                              </ul>
+                          </li>
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li><a class="dropdown-item nav-link nav_item" href="highlights.html"><i
+                                          class="ti-underline"></i> نکات برجسته</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="icon-boxes.html"><i
+                                          class="ti-widget"></i> جعبه آیکون</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="lists.html"><i
+                                          class="ti-list"></i> لیست ها</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="maps.html"><i
+                                          class="ti-map-alt"></i> نقشه</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="pricing-table.html"><i
+                                          class="ti-layout-column3"></i> جدول قیمت گذاری</a></li>
+                              </ul>
+                          </li>
+                          <li class="mega-menu-col col-lg-3">
+                              <ul>
+                                  <li><a class="dropdown-item nav-link nav_item" href="progress-bars.html"><i
+                                          class="ti-layout-list-post"></i> میله های پیشرفت</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="social-icons.html"><i
+                                          class="ti-facebook"></i> شبکه های اجتماعی</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="tab.html"><i
+                                          class="ti-layout-accordion-separated"></i> برگه </a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="table.html"><i
+                                          class="ti-layout-tab"></i> جدول</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="testimonial.html"><i
+                                          class="ti-layout-slider-alt"></i> توصیفات</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <li>
+                  <a class="nav-link" href="contact.html">تماس با ما</a>
+              </li>
+          </ul>
+      </div>
+      <ul class="navbar-nav attr-nav align-items-center">
+          <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="ion-ios-search-strong"></i></a>
+              <div class="search-overlay">
+                  <div class="search_wrap">
+                      <form>
+                          <div class="rounded_input">
+                              <input type="text" placeholder="جستجو" class="form-control" id="search_input">
+                          </div>
+                          <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
+                      </form>
+                  </div>
+              </div>
+          </li>
+          <li class="dropdown cart_wrap">
+              <a class="nav-link" href="#" data-toggle="dropdown"><i class="ion-bag"></i><span class="cart_count">2</span></a>
+              <div class="cart_box dropdown-menu dropdown-menu-right">
+                  <ul class="cart_list">
+                      <li>
+                          <a href="#" class="item_remove"><i class="ion-close"></i></a>
+                          <a href="#"><img src="assets/images/cart_thamb1.jpg" alt="cart_thumb1">نام محصول ارگانیک </a>
+                          <p><span class="float-right">1 x </span> <span class="float-right">1500 تومان</span></p>
+                      </li>
+                      <li>
+                          <a href="#" class="item_remove"><i class="ion-close"></i></a>
+                          <a href="#"><img src="assets/images/cart_thamb2.jpg" alt="cart_thumb2">نام محصول ارگانیک</a>
+                          <p><span class="float-right">1 x </span> <span class="float-right">1500 تومان</span></p>
+                      </li>
+                  </ul>
+                  <div class="cart_footer">
+                      <p class="cart_total">جمع کل : <span class="cart_amount"> <span class="price_symbole">2500 تومان</span></span>
+                      </p>
+                      <p class="cart_buttons"><a href="cart.html" class="btn btn-default btn-radius view-cart">مشاهده سبد خرید</a>
+                          <a href="checkout.html" class="btn btn-dark btn-radius checkout">پرداخت</a>
+                      </p>
+                  </div>
+              </div>
+          </li>
+      </ul>
+  </nav>
+</div>
