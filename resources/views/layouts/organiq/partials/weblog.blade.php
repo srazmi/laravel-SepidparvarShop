@@ -20,7 +20,7 @@
                    data-animation-delay="0.04s">
                   <div class="blog_img">
                       <a href="#">
-                          <img src="assets/images/blog_small_img1.jpg" alt="blog_small_img1">
+                          <img src="{{asset('assets/images/blog_small_img1.jpg')}}" alt="blog_small_img1">
                       </a>
                       <div class="blog_date style1"><h4>02</h4><span>ممکن است</span></div>
                   </div>
@@ -41,7 +41,7 @@
                    data-animation-delay="0.05s">
                   <div class="blog_img">
                       <a href="#">
-                          <img src="assets/images/blog_small_img2.jpg" alt="blog_small_img2">
+                          <img src="{{asset('assets/images/blog_small_img2.jpg')}}" alt="blog_small_img2">
                       </a>
                       <div class="blog_date style1"><h4>25</h4><span>مار</span></div>
                   </div>
@@ -62,7 +62,7 @@
                    data-animation-delay="0.06s">
                   <div class="blog_img">
                       <a href="#">
-                          <img src="assets/images/blog_small_img3.jpg" alt="blog_small_img3">
+                          <img src="{{asset('assets/images/blog_small_img3.jpg')}}" alt="blog_small_img3">
                       </a>
                       <div class="blog_date style1"><h4>08</h4><span>اوت</span></div>
                   </div>

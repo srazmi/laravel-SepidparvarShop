@@ -15,7 +15,13 @@
               <div class="product_content">
                   <ul class="nav nav-tabs justify-content-center animation" data-animation="fadeInUp"
                       data-animation-delay="0.04s" role="tablist">
-                      <li class="nav-item">
+                      @foreach ($Temp['categori'] as $categori)
+                        <li class="nav-item">
+                            <a class="nav-link active" id="{{$categori->id}}" data-toggle="tab" href="{{$categori->id}}" role="tab"
+                            aria-controls="tab-1" aria-selected="true"><span class="pr_icon1"></span> {{$categori->persian_name}}</a>
+                        </li>  
+                      @endforeach
+                      {{-- <li class="nav-item">
                           <a class="nav-link active" id="tab1" data-toggle="tab" href="#tab-1" role="tab"
                              aria-controls="tab-1" aria-selected="true"><span class="pr_icon1"></span>کلیه محصولات</a>
                       </li>
@@ -34,17 +40,21 @@
                       <li class="nav-item">
                           <a class="nav-link" id="tab5" data-toggle="tab" href="#tab-5" role="tab"
                              aria-controls="tab-5" aria-selected="false"><span class="pr_icon5"></span>چای</a>
-                      </li>
+                      </li> --}}
                   </ul>
                   <div class="small_divider clearfix"></div>
                   <div class="tab-content">
-                      <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab1">
+                      <div class="tab-pane fade show active" id="{{$categori->id}}" role="tabpanel" aria-labelledby="{{$categori->id}}">
                           <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.05s">
+                            
                               <div class="col-xl-3 col-lg-4 col-sm-6">
+                                @foreach ($Temp['kala'] as $kala)
+                                @if ($categori->id == $kala->categori_id)
                                   <div class="product">
+                                    
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img1.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}"
                                                            alt="product_img1"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -56,19 +66,23 @@
                                           </div>
                                       </div>
                                       <div class="product_info">
-                                          <h6><a href="#">توت فرنگی ارگانیک تازه</a></h6>
+                                          <h6><a href="#">{{ $kala->name }} </a></h6>
                                           <div class="rating">
                                               <div class="product_rate" style="width:80%"></div>
                                           </div>
-                                          <span class="price">35.00 تومان</span>
+                                          <span class="price">{{ $kala->price }} </span>
                                       </div>
+                                                              
                                   </div>
+                                  @endif
+                                  @endforeach    
                               </div>
+                              
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-10٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img2.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}"
                                                            alt="product_img2"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -91,7 +105,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img3.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img3.jpg')}}"
                                                            alt="product_img3"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -115,7 +129,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img4.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}"
                                                            alt="product_img4"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -138,7 +152,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img5.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}"
                                                            alt="product_img5"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -161,7 +175,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img6.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img6.jpg')}}"
                                                            alt="product_img6"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -185,7 +199,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_red">داغ</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img7.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}"
                                                            alt="product_img7"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -209,7 +223,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-25٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img8.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}"
                                                            alt="product_img8"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -237,7 +251,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-10٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img2.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}"
                                                            alt="product_img2"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -260,7 +274,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img3.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img3.jpg')}}"
                                                            alt="product_img3"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -283,7 +297,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img5.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}"
                                                            alt="product_img5"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -306,7 +320,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img6.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img6.jpg')}}"
                                                            alt="product_img6"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -330,7 +344,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_red">داغ</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img7.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}"
                                                            alt="product_img7"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -354,7 +368,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-25٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img8.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}"
                                                            alt="product_img8"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -382,7 +396,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img1.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}"
                                                            alt="product_img1"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -406,7 +420,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-10٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img2.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}"
                                                            alt="product_img2"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -430,7 +444,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img4.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}"
                                                            alt="product_img4"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -453,7 +467,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img5.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}"
                                                            alt="product_img5"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -477,7 +491,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_red">داغ</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img7.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}"
                                                            alt="product_img7"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -501,7 +515,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-25٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img8.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}"
                                                            alt="product_img8"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -529,7 +543,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img4.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}"
                                                            alt="product_img4"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -552,7 +566,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img5.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}"
                                                            alt="product_img5"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -575,7 +589,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img6.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img6.jpg')}}"
                                                            alt="product_img6"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -599,7 +613,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_red">داغ</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img7.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}"
                                                            alt="product_img7"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -623,7 +637,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-25٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img8.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}"
                                                            alt="product_img8"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -651,7 +665,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_red">داغ</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img7.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}"
                                                            alt="product_img7"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -674,7 +688,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img3.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img3.jpg')}}"
                                                            alt="product_img3"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -698,7 +712,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img4.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}"
                                                            alt="product_img4"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -722,7 +736,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-10٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img2.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}"
                                                            alt="product_img2"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -745,7 +759,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img5.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}"
                                                            alt="product_img5"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -769,7 +783,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_orange">-25٪</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img8.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}"
                                                            alt="product_img8"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -792,7 +806,7 @@
                               <div class="col-xl-3 col-lg-4 col-sm-6">
                                   <div class="product">
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img6.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img6.jpg')}}"
                                                            alt="product_img6"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -816,7 +830,7 @@
                                   <div class="product">
                                       <span class="pr_flash bg_green">فروش</span>
                                       <div class="product_img">
-                                          <a href="#"><img src="assets/images/product_img1.jpg"
+                                          <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}"
                                                            alt="product_img1"></a>
                                           <div class="product_action_box">
                                               <ul class="list_none pr_action_btn">
@@ -846,43 +860,43 @@
   <div class="overlap_shape">
       <div class="ol_shape8">
           <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: -30, &quot;smoothness&quot;: 20}" src="assets/images/shape25.png"
+              <img data-parallax="{&quot;y&quot;: -30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape25.png')}}"
                    alt="شکل 25">
           </div>
       </div>
       <div class="ol_shape9">
           <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="assets/images/shape26.png"
+              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape26.png')}}"
                    alt="شکل26">
           </div>
       </div>
       <div class="ol_shape10">
           <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="assets/images/shape27.png"
+              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape27.png')}}"
                    alt="شکل 27">
           </div>
       </div>
       <div class="ol_shape11">
           <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="assets/images/shape28.png"
+              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape28.png')}}"
                    alt="شکل28">
           </div>
       </div>
       <div class="ol_shape12">
           <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="assets/images/shape29.png"
+              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape29.png')}}"
                    alt="شکل 29">
           </div>
       </div>
       <div class="ol_shape13">
           <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="assets/images/shape30.png"
+              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape30.png')}}"
                    alt="شکل 30">
           </div>
       </div>
       <div class="ol_shape14">
           <div class="bounceimg" data-animation="fadeInRight" data-animation-delay="0.5s">
-              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="assets/images/shape31.png"
+              <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape31.png')}}"
                    alt="شکل 31">
           </div>
       </div>

@@ -18,19 +18,19 @@
                 <div class="carousel_slide5 owl-carousel owl-theme" data-margin="30" data-dots="false" data-loop="true"
                      data-autoplay="true">
                     <div class="items">
-                        <a href="#"><img src="assets/images/cl_logo1.png" alt="cl_logo1"></a>
+                        <a href="#"><img src="{{asset('assets/images/cl_logo1.png')}}" alt="cl_logo1"></a>
                     </div>
                     <div class="items">
-                        <a href="#"><img src="assets/images/cl_logo2.png" alt="cl_logo2"></a>
+                        <a href="#"><img src="{{asset('assets/images/cl_logo2.png')}}" alt="cl_logo2"></a>
                     </div>
                     <div class="items">
-                        <a href="#"><img src="assets/images/cl_logo3.png" alt="cl_logo3"></a>
+                        <a href="#"><img src="{{asset('assets/images/cl_logo3.png')}}" alt="cl_logo3"></a>
                     </div>
                     <div class="items">
-                        <a href="#"><img src="assets/images/cl_logo4.png" alt="cl_logo4"></a>
+                        <a href="#"><img src="{{asset('assets/images/cl_logo4.png')}}" alt="cl_logo4"></a>
                     </div>
                     <div class="items">
-                        <a href="#"><img src="assets/images/cl_logo5.png" alt="cl_logo5"></a>
+                        <a href="#"><img src="{{asset('assets/images/cl_logo5.png')}}" alt="cl_logo5"></a>
                     </div>
                 </div>
             </div>

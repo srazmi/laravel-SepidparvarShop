@@ -25,7 +25,7 @@
                       </div>
                       <div class="testi_meta">
                           <div class="testimonial_img">
-                              <img src="assets/images/client_img1.jpg" alt="مشتری">
+                              <img src="{{asset('assets/images/client_img1.jpg')}}" alt="مشتری">
                           </div>
                           <div class="testi_user">
                               <h5>مبارک والتر</h5>
@@ -39,7 +39,7 @@
                       </div>
                       <div class="testi_meta">
                           <div class="testimonial_img">
-                              <img src="assets/images/client_img2.jpg" alt="مشتری">
+                              <img src="{{asset('assets/images/client_img2.jpg')}}" alt="مشتری">
                           </div>
                           <div class="testi_user">
                               <h5>جان مارک</h5>
@@ -53,7 +53,7 @@
                       </div>
                       <div class="testi_meta">
                           <div class="testimonial_img">
-                              <img src="assets/images/client_img3.jpg" alt="مشتری">
+                              <img src="{{asset('assets/images/client_img3.jpg')}}" alt="مشتری">
                           </div>
                           <div class="testi_user">
                               <h5>کالوین ویلیام</h5>
@@ -69,13 +69,13 @@
       <div class="ol_shape17">
           <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
               <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}"
-                   src="assets/images/testimonial_bg_img1.jpg" alt="Testonial_bg_img1">
+                   src="{{asset('assets/images/testimonial_bg_img1.jpg')}}" alt="Testonial_bg_img1">
           </div>
       </div>
       <div class="ol_shape18">
           <div class="animation float-left" data-animation="fadeInRight" data-animation-delay="0.5s">
               <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}"
-                   src="assets/images/testimonial_bg_img2.png" alt="Testonial_bg_img2">
+                   src="{{asset('assets/images/testimonial_bg_img2.png')}}" alt="Testonial_bg_img2">
           </div>
       </div>
   </div>

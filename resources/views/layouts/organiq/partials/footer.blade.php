@@ -4,7 +4,7 @@
           <div class="row">
               <div class="col-lg-4">
                   <div class="footer_logo">
-                      <a href="index.html"><img alt="آرم" src="assets/images/logo_dark.png"></a>
+                      <a href="index.html"><img alt="آرم" src="{{asset('assets/images/logo_dark.png')}}"></a>
                   </div>
                   <div class="footer_desc">
                       <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </p>
@@ -49,21 +49,21 @@
               <div class="col-lg-4 col-md-6 col-sm-4">
                   <h5 class="widget_title">اینستاگرام</h5>
                   <ul class="list_none instafeed">
-                      <li><a href="#"><img src="assets/images/insta_img1.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img1.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img2.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img2.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img3.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img3.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img4.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img4.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img5.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img5.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img6.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img6.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img7.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img7.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
-                      <li><a href="#"><img src="assets/images/insta_img8.jpg" alt="insta_img"><span
+                      <li><a href="#"><img src="{{asset('assets/images/insta_img8.jpg')}}" alt="insta_img"><span
                               class="insta_icon"><i class="ti-instagram"></i></span></a></li>
                   </ul>
               </div>
@@ -123,11 +123,11 @@
               </div>
               <div class="col-lg-4 order-lg-first">
                   <ul class="list_none footer_payment text-center text-lg-left">
-                      <li><a href="#"><img src="assets/images/visa.png" alt="ویزا"></a></li>
-                      <li><a href="#"><img src="assets/images/discover.png" alt="كشف كردن"></a></li>
-                      <li><a href="#"><img src="assets/images/master_card.png" alt="مستر کارت"></a></li>
-                      <li><a href="#"><img src="assets/images/paypal.png" alt="پی پال"></a></li>
-                      <li><a href="#"><img src="assets/images/amarican_express.png" alt="amarican_express"></a></li>
+                      <li><a href="#"><img src="{{asset('assets/images/visa.png')}}" alt="ویزا"></a></li>
+                      <li><a href="#"><img src="{{asset('assets/images/discover.png')}}" alt="كشف كردن"></a></li>
+                      <li><a href="#"><img src="{{asset('assets/images/master_card.png')}}" alt="مستر کارت"></a></li>
+                      <li><a href="#"><img src="{{asset('assets/images/paypal.png')}}" alt="پی پال"></a></li>
+                      <li><a href="#"><img src="{{asset('assets/images/amarican_express.png')}}" alt="amarican_express"></a></li>
                   </ul>
               </div>
               <div class="col-lg-4">
@@ -145,25 +145,25 @@
   <div class="overlap_shape">
       <div class="ol_shape21">
           <div class="animation">
-              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="assets/images/shape36.png"
+              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape36.png')}}"
                    alt="شکل 36">
           </div>
       </div>
       <div class="ol_shape22">
           <div class="animation">
-              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="assets/images/shape37.png"
+              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape37.png')}}"
                    alt="شکل 37">
           </div>
       </div>
       <div class="ol_shape23">
           <div class="animation">
-              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="assets/images/shape38.png"
+              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape38.png')}}"
                    alt="شکل 38">
           </div>
       </div>
       <div class="ol_shape24">
           <div class="animation">
-              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="assets/images/shape39.png"
+              <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape39.png')}}"
                    alt="شکل 39">
           </div>
       </div>
@@ -177,26 +177,26 @@
           <div class="col-md-6">
             <div class="product-image">
                <span class="pr_flash bg_green">فروش</span>
-               <img id="product_img" src='assets/images/product1.jpg' data-zoom-image="assets/images/product1.jpg"/>
+               <img id="product_img" src='{{asset('assets/images/product1.jpg')}}' data-zoom-image="{{asset('assets/images/product1.jpg')}}"/>
                <div id="pr_item_gallery" class="product_gallery_item owl-thumbs-slider owl-carousel owl-theme">
                   <div class="item">
-                      <a href="#" class="active" data-image="assets/images/product1.jpg" data-zoom-image="assets/images/product1.jpg">
-                          <img src="assets/images/product_img1.jpg" />
+                      <a href="#" class="active" data-image="{{asset('assets/images/product1.jpg')}}" data-zoom-image="{{asset('assets/images/product1.jpg')}}">
+                          <img src="{{asset('assets/images/product_img1.jpg')}}" />
                       </a>
                   </div>
                   <div class="item">
-                      <a href="#" data-image="assets/images/product1-1.jpg" data-zoom-image="assets/images/product1-1.jpg">
-                          <img src="assets/images/product_img1-1.jpg" />
+                      <a href="#" data-image="{{asset('assets/images/product1-1.jpg')}}" data-zoom-image="{{asset('assets/images/product1-1.jpg')}}">
+                          <img src="{{asset('assets/images/product_img1-1.jpg')}}" />
                       </a>
                   </div>
                   <div class="item">
-                      <a href="#" data-image="assets/images/product1-2.jpg" data-zoom-image="assets/images/product1-2.jpg">
-                          <img src="assets/images/product_img1-2.jpg" />
+                      <a href="#" data-image="{{asset('assets/images/product1-2.jpg')}}" data-zoom-image="{{asset('assets/images/product1-2.jpg')}}">
+                          <img src="{{asset('assets/images/product_img1-2.jpg')}}" />
                       </a>
                   </div>
                   <div class="item">
-                      <a href="#" data-image="assets/images/product1-3.jpg" data-zoom-image="assets/images/product1-3.jpg">
-                          <img src="assets/images/product_img1-3.jpg" />
+                      <a href="#" data-image="{{asset('assets/images/product1-3.jpg')}}" data-zoom-image="{{asset('assets/images/product1-3.jpg')}}">
+                          <img src="{{asset('assets/images/product_img1-3.jpg')}}" />
                       </a>
                   </div>
               </div>

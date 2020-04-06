@@ -9,36 +9,36 @@
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/images/favicon.png')}}">
     <!-- Animation CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <!-- Latest Bootstrap min CSS -->
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
     <!-- Google Font -->
-    <link href="../../../external.html?link=https://fonts.googleapis.com/css?family=Lobster+Two:400,700"
+    <link href="{{asset('../../../external.html?link=https://fonts.googleapis.com/css?family=Lobster+Two:400,700')}}"
           rel="stylesheet">
-    <link href="../../../external.html?link=https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+    <link href="{{asset('../../../external.html?link=https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900')}}"
           rel="stylesheet">
     <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="assets/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/ionicons.min.css')}}">
     <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
     <!-- Themify Font CSS -->
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="{{asset('assets/css/themify-icons.css')}}">
     <!--- owl carousel CSS-->
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
-    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('assets/owlcarousel/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/owlcarousel/css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/owlcarousel/css/owl.theme.default.min.css')}}">
     <!-- Magnific Popup CSS -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
     <!-- jquery-ui CSS -->
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" id="layoutstyle" href="assets/color/theme-default.css">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+    <link rel="stylesheet" id="layoutstyle" href="{{asset('assets/color/theme-default.css')}}">
     <script>
         var sc_project = 11981757;
         var sc_invisible = 1;
         var sc_security = "35d2687e";
         var sc_https = 1;
     </script>
-    <script src="../../../www.statcounter.com/counter/counter.js" async></script>
+    <script src="{{asset('../../../www.statcounter.com/counter/counter.js')}}" async></script>

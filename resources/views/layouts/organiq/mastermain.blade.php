@@ -5,16 +5,20 @@
 </head>
 <body>
 <!-- LOADER -->
-    @yield('loader')
+    {{-- @yield('loader') --}}
 <!-- END LOADER -->
 <!-- START HEADER -->
 <header class="header_wrap dark_skin main_menu_uppercase">
     @include('layouts.organiq.partials.header')
 </header>
 <!-- END HEADER -->
+<div>
+    @yield('content')
+</div>
 <!-- START SECTION BANNER -->
     @yield('banner')
 <!-- END SECTION BANNER -->
+
 
 <!-- START SECTION BANNER BOX -->
     @yield('bannerbox')

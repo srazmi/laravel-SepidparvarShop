@@ -19,10 +19,35 @@
                       </div>
                   </li>
                   <li class="dropdown">
-                      <a class="dropdown-toggle" href="#" data-toggle="dropdown">پروفایل کاربری</a>
+                      <a class="dropdown-toggle" href="{{ route('login') }}" data-toggle="dropdown">پروفایل کاربری</a>
                       <div class="dropdown-menu shadow dropdown-menu-right">
-                          <ul>
-                              <li><a class="dropdown-item" href="my-account.html">پروفایل کاربری</a></li>
+                          <ul> 
+                            @guest
+                                @if (Route::has('login'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('login') }}">{{ __(' ورود به حساب کاربری') }}</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+            
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            {{ __('خروج از حساب کاربری') }}
+                                        </a>
+            
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                            </li>
                               <li><a class="dropdown-item" href="wishlist.html">لیست علاقه مندی</a></li>
                               <li><a class="dropdown-item" href="checkout.html">سبد خرید</a></li>
                           </ul>
@@ -36,9 +61,9 @@
 <div class="container">
   <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="index.html">
-          <img class="logo_light" src="assets/images/logo_white.png" alt="آرم">
-          <img class="logo_dark" src="assets/images/logo_dark.png" alt="آرم">
-          <img class="logo_default" src="assets/images/logo_dark.png" alt="آرم">
+          <img class="logo_light" src="{{asset('assets/images/logo_white.png')}}" alt="آرم">
+          <img class="logo_dark" src="{{asset('assets/images/logo_dark.png')}}" alt="آرم">
+          <img class="logo_default" src="{{asset('assets/images/logo_dark.png')}}" alt="آرم">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="ناوبری را تغییر دهید"><span
@@ -46,21 +71,29 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
               <li class="dropdown">
-                  <a class="dropdown-toggle nav-link active" href="#" data-toggle="dropdown">صفحه اصلی</a>
-                  <div class="dropdown-menu">
-                      <ul>
-                          <li><a class="dropdown-item nav-link nav_item active" href="index.html">صفحه اصلی 1</a>
-                          </li>
-                          <li><a class="dropdown-item nav-link nav_item" href="index-2.html">صفحه اصلی 2</a></li>
-                          <li><a class="dropdown-item nav-link nav_item" href="index-3.html">صفحه اصلی 3</a></li>
-                      </ul>
-                  </div>
-              </li>
-              <li>
-                  <a class="nav-link" href="about.html">درباره ما</a>
-              </li>
+                <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">دسته بندی محصولات</a>
+                <div class="dropdown-menu">
+                    <ul>
+                        @foreach($Temp['categori'] as $key)
+                        {{-- @dd($Temp['categori']); --}}
+                            <li><a class="dropdown-item nav-link nav_item " href="{{ asset('/').'categori/'.$key->name.'/'.$key->id }}"> {{$key->persian_name}} </a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        @foreach ($Temp['kala'] as $kala)
+                                            @if ($key->id == $kala->categori_id)
+                                                <li><a class="dropdown-item nav-link nav_item"
+                                                    href="{{ asset('/').'categori/'.$key->name.'/'.$kala->name.'/'.$kala->id }}"> {{$kala->name}} </a></li> 
+                                            @endif
+                                        @endforeach                                    
+                                    </ul>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </li>
               <li class="dropdown dropdown-mega-menu">
-                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">فروشگاه</a>
+                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">تخفیف ها و پیشنهادها</a>
                   <div class="dropdown-menu">
                       <ul class="mega-menu d-lg-flex">
                           <li class="mega-menu-col col-lg-3">
@@ -95,7 +128,7 @@
                           </li>
                           <li class="mega-menu-col col-lg-3">
                               <div class="ads_banner">
-                                  <a href="#"><img src="assets/images/mega_menu_ads.jpg" alt="mega_menu_ads"></a>
+                                  <a href="#"><img src="{{asset('assets/images/mega_menu_ads.jpg')}}" alt="mega_menu_ads"></a>
                               </div>
                           </li>
                       </ul>
@@ -172,42 +205,7 @@
                       </ul>
                   </div>
               </li>
-              <li class="dropdown">
-                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">صفحات</a>
-                  <div class="dropdown-menu">
-                      <ul>
-                          <li><a class="dropdown-item nav-link nav_item" href="team.html">تیم ما</a></li>
-                          <li><a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">گالری</a>
-                              <div class="dropdown-menu">
-                                  <ul>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-three-columns.html">گالری سه ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-four-columns.html">گالری دو ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-three-columns-wide.html">گالری سه ستون تمام عرض</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-four-columns-wide.html">گالری چهار ستون تمام عرض</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-masonry-three-columns.html">گالری سه ستون تمام عرض</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-masonry-four-columns.html">گالری چهار ستون تمام عرض</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-masonry-three-columns-wide.html">گالری سه ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="gallery-masonry-four-columns-wide.html">گالری چهار ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item" href="gallery-detail.html">جزییات گالری</a></li>
-                                  </ul>
-                              </div>
-                          </li>
-                          <li><a class="dropdown-item nav-link nav_item" href="faq.html">پرسش پاسخ</a></li>
-                          <li><a class="dropdown-item nav-link nav_item" href="coming-soon.html">صفحه به زودی</a>
-                          </li>
-                          <li><a class="dropdown-item nav-link nav_item" href="404.html">صفحه 404</a></li>
-                      </ul>
-                  </div>
-              </li>
-              <li class="dropdown dropdown-mega-menu">
+              {{-- <li class="dropdown dropdown-mega-menu">
                   <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">المان ها</a>
                   <div class="dropdown-menu">
                       <ul class="mega-menu d-lg-flex">
@@ -269,9 +267,12 @@
                           </li>
                       </ul>
                   </div>
+              </li> --}}
+              <li>
+                <a class="nav-link" href="{{Route('aboutus')}}">درباره ما</a>
               </li>
               <li>
-                  <a class="nav-link" href="contact.html">تماس با ما</a>
+                  <a class="nav-link" href="{{Route('contactus')}}">تماس با ما</a>
               </li>
           </ul>
       </div>
@@ -289,25 +290,25 @@
               </div>
           </li>
           <li class="dropdown cart_wrap">
-              <a class="nav-link" href="#" data-toggle="dropdown"><i class="ion-bag"></i><span class="cart_count">2</span></a>
+          <a class="nav-link" href="{{ Route('cart') }}" data-toggle="dropdown"><i class="ion-bag"></i><span class="cart_count">2</span></a>
               <div class="cart_box dropdown-menu dropdown-menu-right">
                   <ul class="cart_list">
                       <li>
                           <a href="#" class="item_remove"><i class="ion-close"></i></a>
-                          <a href="#"><img src="assets/images/cart_thamb1.jpg" alt="cart_thumb1">نام محصول ارگانیک </a>
+                          <a href="#"><img src="{{asset('assets/images/cart_thamb1.jpg')}}" alt="cart_thumb1">نام محصول ارگانیک </a>
                           <p><span class="float-right">1 x </span> <span class="float-right">1500 تومان</span></p>
                       </li>
                       <li>
                           <a href="#" class="item_remove"><i class="ion-close"></i></a>
-                          <a href="#"><img src="assets/images/cart_thamb2.jpg" alt="cart_thumb2">نام محصول ارگانیک</a>
+                          <a href="#"><img src="{{asset('assets/images/cart_thamb2.jpg')}}" alt="cart_thumb2">نام محصول ارگانیک</a>
                           <p><span class="float-right">1 x </span> <span class="float-right">1500 تومان</span></p>
                       </li>
                   </ul>
                   <div class="cart_footer">
                       <p class="cart_total">جمع کل : <span class="cart_amount"> <span class="price_symbole">2500 تومان</span></span>
                       </p>
-                      <p class="cart_buttons"><a href="cart.html" class="btn btn-default btn-radius view-cart">مشاهده سبد خرید</a>
-                          <a href="checkout.html" class="btn btn-dark btn-radius checkout">پرداخت</a>
+                      <p class="cart_buttons"><a href="{{ Route('cart') }}" class="btn btn-default btn-radius view-cart">مشاهده سبد خرید</a>
+                          <a href="{{ Route('checkout') }}" class="btn btn-dark btn-radius checkout">پرداخت</a>
                       </p>
                   </div>
               </div>

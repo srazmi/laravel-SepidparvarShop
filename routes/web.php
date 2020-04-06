@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,5 +19,25 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/login', 'Auth\LoginController@Login')->name('login');
+
+//============================= دسته بندی محصولات ====================================
+Route::get('/', 'SiteController@ShowHomepage');
+Route::get('/categori/{name}/{id}', 'SiteController@ShowCategori');
+Route::get('/categori/{categori}/{name}/{id}', 'SiteController@ShowSubcategori');
+
+//====================================== درباره ما و ارتباط با ما  =====================================
+Route::get('/aboutus', 'SiteController@aboutus')->name('aboutus');
+Route::get('/contactus', 'SiteController@contactus')->name('contactus');
+
+//====================================== سبد خرید =======================================
+Route::get('/cart', 'BasketController@cart')->name('cart');
+Route::get('/checkout', 'BasketController@checkout')->name('checkout');
+
+
+
+
+
+
 

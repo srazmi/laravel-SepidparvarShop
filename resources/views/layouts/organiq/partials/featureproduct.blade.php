@@ -18,7 +18,7 @@
                     <div class="items">
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img1.jpg" alt="product_img1"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}" alt="product_img1"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img4.jpg" alt="product_img4"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}" alt="product_img4"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img7.jpg" alt="product_img7"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}" alt="product_img7"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -80,7 +80,7 @@
                     <div class="items">
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img2.jpg" alt="product_img2"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}" alt="product_img2"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img5.jpg" alt="product_img5"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}" alt="product_img5"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img8.jpg" alt="product_img8"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}" alt="product_img8"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -142,7 +142,7 @@
                     <div class="items">
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img3.jpg" alt="product_img3"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img3.jpg')}}" alt="product_img3"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -162,7 +162,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img6.jpg" alt="product_img6"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img6.jpg')}}" alt="product_img6"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -182,7 +182,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img9.jpg" alt="product_img9"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img9.jpg')}}" alt="product_img9"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -204,7 +204,7 @@
                     <div class="items">
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img2.jpg" alt="product_img2"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}" alt="product_img2"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img5.jpg" alt="product_img5"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}" alt="product_img5"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -244,7 +244,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img8.jpg" alt="product_img8"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img8.jpg')}}" alt="product_img8"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -266,7 +266,7 @@
                     <div class="items">
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img1.jpg" alt="product_img1"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}" alt="product_img1"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -286,7 +286,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img4.jpg" alt="product_img4"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}" alt="product_img4"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -306,7 +306,7 @@
                         </div>
                         <div class="product">
                             <div class="product_img">
-                                <a href="#"><img src="assets/images/product_img7.jpg" alt="product_img7"></a>
+                                <a href="#"><img src="{{asset('assets/images/product_img7.jpg')}}" alt="product_img7"></a>
                                 <div class="product_action_box">
                                     <ul class="list_none pr_action_btn">
                                         <li><a href="#"><i class="ti-heart"></i></a></li>

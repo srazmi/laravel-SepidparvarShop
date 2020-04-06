@@ -22,13 +22,13 @@
     <div class="overlap_shape">
         <div class="ol_shape19">
             <div class="animation" data-animation="fadeInLeft" data-animation-delay="0.5s">
-                <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="assets/images/shape34.png"
+                <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape34.png')}}"
                      alt="شکل34">
             </div>
         </div>
         <div class="ol_shape20">
             <div class="animation" data-animation="fadeInRight" data-animation-delay="0.5s">
-                <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="assets/images/shape35.png"
+                <img data-parallax="{&quot;y&quot;: 20, &quot;smoothness&quot;: 20}" src="{{asset('assets/images/shape35.png')}}"
                      alt="شکل35">
             </div>
         </div>
