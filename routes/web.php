@@ -31,6 +31,9 @@ Route::get('/categori/{categori}/{name}/{id}', 'SiteController@ShowSubcategori')
 Route::get('/aboutus', 'SiteController@aboutus')->name('aboutus');
 Route::get('/contactus', 'SiteController@contactus')->name('contactus');
 
+//====================================== وبلاگ ===========================================
+Route::get('/weblog', 'SiteController@weblog')->name('weblog');
+
 //====================================== سبد خرید =======================================
 Route::get('/cart', 'BasketController@cart')->name('cart');
 Route::get('/checkout', 'BasketController@checkout')->name('checkout');

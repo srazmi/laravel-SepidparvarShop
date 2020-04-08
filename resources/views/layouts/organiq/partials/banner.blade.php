@@ -70,37 +70,37 @@
                   <div class="shape4">
                       <div class="animation" data-animation="fadeInLeftBig" data-animation-delay="0.5s">
                           <img data-parallax="{&quot;y&quot;: -30, &quot;smoothness&quot;: 20}"
-                               src={{asset('"assets/images/shape4.png')}}" alt="شکل 4">
+                               src="{{asset('assets/images/shape4.png')}}" alt="شکل 4">
                       </div>
                   </div>
                   <div class="shape5">
                       <div class="animation" data-animation="slideInDown" data-animation-delay="0.5s">
                           <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}"
-                               src={{asset('"assets/images/shape5.png')}}" alt="شکل 5">
+                               src="{{asset('assets/images/shape5.png')}}" alt="شکل 5">
                       </div>
                   </div>
                   <div class="shape6">
                       <div class="animation" data-animation="bounceInDown" data-animation-delay="0.5s">
                           <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}"
-                               src={{asset('"assets/images/shape6.png')}}" alt="شکل 6">
+                               src="{{asset('assets/images/shape6.png')}}" alt="شکل 6">
                       </div>
                   </div>
                   <div class="shape7">
                       <div class="animation" data-animation="fadeInRightBig" data-animation-delay="0.5s">
                           <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}"
-                               src={{asset('"assets/images/shape7.png')}}" alt="شکل 7">
+                               src="{{asset('assets/images/shape7.png')}}" alt="شکل 7">
                       </div>
                   </div>
                   <div class="shape8">
                       <div class="animation" data-animation="slideInUp" data-animation-delay="0.5s">
                           <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}"
-                               src={{asset('"assets/images/shape8.png')}}" alt="شکل 8">
+                               src="{{asset('assets/images/shape8.png')}}" alt="شکل 8">
                       </div>
                   </div>
                   <div class="shape9">
                       <div class="animation" data-animation="bounceInUp" data-animation-delay="0.5s">
                           <img data-parallax="{&quot;y&quot;: 30, &quot;smoothness&quot;: 20}"
-                               src={{asset('"assets/images/shape9.png')}}" alt="شکل 9">
+                               src="{{asset('assets/images/shape9.png')}}" alt="شکل 9">
                       </div>
                   </div>
                   <div class="shape10">

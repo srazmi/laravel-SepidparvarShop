@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gender extends Model
 {
-    public function Users()
+    public function User()
     {
-        return $this->hasMany('App\Models\Users','id','gender_id');
+        return $this->hasMany('App\User','id','gender_id');
     }
 }

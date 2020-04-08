@@ -82,4 +82,13 @@ class SiteController extends Controller
         $Temp['kala']= $kala;
         return view ("contactus",compact('Temp'));   
     }
+    public function weblog()
+    {
+        $categori=Categori::all();
+        $kala=Kala::with('categori')->get();
+        // dd($kala);
+        $Temp['categori']=$categori;
+        $Temp['kala']= $kala;
+        return view ("weblog",compact('Temp'));   
+    }
 }

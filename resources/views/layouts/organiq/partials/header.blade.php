@@ -98,32 +98,11 @@
                       <ul class="mega-menu d-lg-flex">
                           <li class="mega-menu-col col-lg-3">
                               <ul>
-                                  <li class="dropdown-header">صفحه فروشگاه</li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="shop-list-view.html">لیست فروشگاه</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="shop-grid-view.html">لیست عمودی فروشگاه</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="shop-three-columns.html">فروشگاه سه ستون</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="shop-four-columns.html">فروشگاه دو ستون</a></li>
-                              </ul>
-                          </li>
-                          <li class="mega-menu-col col-lg-3">
-                              <ul>
-                                  <li class="dropdown-header">جزییات محصول</li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="product-detail.html">جزییات محصول</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item"
-                                         href="product-detail-left-sidebar.html">محصول سایدبار چپ</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item"
-                                         href="product-detail-right-sidebar.html">محصول سایدبار راست</a></li>
-                              </ul>
-                          </li>
-                          <li class="mega-menu-col col-lg-3">
-                              <ul>
-                                  <li class="dropdown-header">صفحات</li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="cart.html">سبد خرید</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="checkout.html">پرداخت</a>
-                                  </li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="wishlist.html">لیست علاقه مندی</a>
-                                  </li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="my-account.html">پروفایل کاربری</a></li>
+                                  {{-- <li class="dropdown-header">صفحه فروشگاه</li> --}}
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-list-view.html"> خوشمزه های شگفت انگیز</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-grid-view.html">  فروش ویژه</a></li>
+                                  {{-- <li><a class="dropdown-item nav-link nav_item" href="shop-three-columns.html">فروشگاه سه ستون</a></li>
+                                  <li><a class="dropdown-item nav-link nav_item" href="shop-four-columns.html">فروشگاه دو ستون</a></li> --}}
                               </ul>
                           </li>
                           <li class="mega-menu-col col-lg-3">
@@ -135,144 +114,13 @@
                   </div>
               </li>
               <li class="dropdown">
-                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">وبلاگ</a>
-                  <div class="dropdown-menu">
-                      <ul>
-                          <li>
-                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">چیدمان وبلاگ</a>
-                              <div class="dropdown-menu">
-                                  <ul>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-standard-fullwidth.html">وبلاگ تمام صفحه</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-standard-left-sidebar.html">وبلاگ کناری چپ</a>
-                                      </li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-standard-right-sidebar.html">وبلاگ کناری راست</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-three-columns.html">وبلاگ سه ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-four-columns.html">وبلاگ چهار ستون</a></li>
-                                  </ul>
-                              </div>
-                          </li>
-                          <li>
-                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">چیدمان وبلاگ</a>
-                              <div class="dropdown-menu">
-                                  <ul>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-masonry-three-columns.html">وبلاگ سه ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-masonry-four-columns.html">وبلاگ چهار ستون</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-masonry-three-columns-wide.html">وبلاگ سه ستون تمام عرض</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-masonry-four-columns-wide.html">وبلاگ چهار ستون تمام عرض</a>
-                                      </li>
-                                  </ul>
-                              </div>
-                          </li>
-                          <li>
-                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">لیست پست ها</a>
-                              <div class="dropdown-menu">
-                                  <ul>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-list-left-sidebar.html"></a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-list-right-sidebar.html">پست عمودی</a></li>
-                                  </ul>
-                              </div>
-                          </li>
-                          <li>
-                              <a class="dropdown-item nav-link nav_item dropdown-toggler" href="#">پست تکی</a>
-                              <div class="dropdown-menu">
-                                  <ul>
-                                      <li><a class="dropdown-item nav-link nav_item" href="blog-single.html">پیشفرض</a>
-                                      </li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-single-left-sidebar.html">سایدبارچپ</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-single-right-sidebar.html">سایدبار راست</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-single-slider.html">پست کناری</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-single-video.html">ویدئو پست</a></li>
-                                      <li><a class="dropdown-item nav-link nav_item"
-                                             href="blog-single-audio.html">پست صوتی</a></li>
-                                  </ul>
-                              </div>
-                          </li>
-                      </ul>
-                  </div>
+                <a class="nav-link" href="{{Route('weblog')}}">وبلاگ</a>
               </li>
-              {{-- <li class="dropdown dropdown-mega-menu">
-                  <a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">المان ها</a>
-                  <div class="dropdown-menu">
-                      <ul class="mega-menu d-lg-flex">
-                          <li class="mega-menu-col col-lg-3">
-                              <ul>
-                                  <li><a class="dropdown-item nav-link nav_item" href="accordions.html"><i
-                                          class="ti-layout-accordion-separated"></i>  آکاردئونها</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="blockquotes.html"><i
-                                          class="ti-quote-left"></i>  بلاک ها</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="buttons.html"><i
-                                          class="ti-mouse"></i>  دکمه ها</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="call-to-action.html"><i
-                                          class="ti-headphone-alt"></i>  فراخوانی برای اقدام</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="carousel.html"><i
-                                          class="ti-layout-slider"></i>  چرخ فلک</a></li>
-                              </ul>
-                          </li>
-                          <li class="mega-menu-col col-lg-3">
-                              <ul>
-                                  <li><a class="dropdown-item nav-link nav_item" href="colors.html"><i
-                                          class="ti-paint-bucket"></i> رنگ ها</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="columns.html"><i
-                                          class="ti-layout-column3-alt"></i> ستون</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="countdown.html"><i
-                                          class="ti-alarm-clock"></i> شمارش معکوس</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="counter.html"><i
-                                          class="ti-timer"></i> پیشخوان</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="heading.html"><i
-                                          class="ti-text"></i> سرفصل</a></li>
-                              </ul>
-                          </li>
-                          <li class="mega-menu-col col-lg-3">
-                              <ul>
-                                  <li><a class="dropdown-item nav-link nav_item" href="highlights.html"><i
-                                          class="ti-underline"></i> نکات برجسته</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="icon-boxes.html"><i
-                                          class="ti-widget"></i> جعبه آیکون</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="lists.html"><i
-                                          class="ti-list"></i> لیست ها</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="maps.html"><i
-                                          class="ti-map-alt"></i> نقشه</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="pricing-table.html"><i
-                                          class="ti-layout-column3"></i> جدول قیمت گذاری</a></li>
-                              </ul>
-                          </li>
-                          <li class="mega-menu-col col-lg-3">
-                              <ul>
-                                  <li><a class="dropdown-item nav-link nav_item" href="progress-bars.html"><i
-                                          class="ti-layout-list-post"></i> میله های پیشرفت</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="social-icons.html"><i
-                                          class="ti-facebook"></i> شبکه های اجتماعی</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="tab.html"><i
-                                          class="ti-layout-accordion-separated"></i> برگه </a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="table.html"><i
-                                          class="ti-layout-tab"></i> جدول</a></li>
-                                  <li><a class="dropdown-item nav-link nav_item" href="testimonial.html"><i
-                                          class="ti-layout-slider-alt"></i> توصیفات</a></li>
-                              </ul>
-                          </li>
-                      </ul>
-                  </div>
-              </li> --}}
               <li>
                 <a class="nav-link" href="{{Route('aboutus')}}">درباره ما</a>
               </li>
               <li>
-                  <a class="nav-link" href="{{Route('contactus')}}">تماس با ما</a>
+                <a class="nav-link" href="{{Route('contactus')}}">تماس با ما</a>
               </li>
           </ul>
       </div>

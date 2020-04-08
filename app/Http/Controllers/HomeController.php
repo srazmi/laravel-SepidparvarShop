@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Categori;
+use App\Models\Kala;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $categori=Categori::all();
+        $kala=Kala::with('categori')->get();
+        // dd($kala);
+        $Temp['categori']=$categori;
+        $Temp['kala']= $kala;
+        return view ("home",compact('Temp')); 
     }
 }
