@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Auth;
 use Auth;
 use App\User;
 use App\Models\Roles;
-use App\Models\Categori;
-use App\Models\Kala;
+
 
 
 use App\Http\Controllers\Controller;
@@ -43,14 +42,5 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    public function Login()
-    {
-        $categori=Categori::all();
-        $kala=Kala::with('categori')->get();
-        // dd($kala);
-        $Temp['categori']=$categori;
-        $Temp['kala']= $kala;
-        
-        return view('auth.login',compact('Temp'));
-    }
+
 }

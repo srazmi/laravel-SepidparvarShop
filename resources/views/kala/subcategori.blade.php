@@ -39,7 +39,7 @@
                         <div class="pr_detail">
                             <div class="product-description">
 
-                                @foreach ($Temp['kala_id'] as $kala)
+                                @foreach ($kala_id as $kala)
                                     {{-- @dd($kala); --}}
                                     <div class="product-title">
                                         <h4><a href="#">{{ $kala->name }}</a></h4>

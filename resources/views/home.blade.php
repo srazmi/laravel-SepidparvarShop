@@ -1,6 +1,7 @@
 @extends('layouts.organiq.mastermain')
 
 
+{{-- @include('layouts.organiq.partials.loader') --}}
 @include('layouts.organiq.partials.banner')
 @include('layouts.organiq.partials.bannerbox')
 @include('layouts.organiq.partials.whychooseus')

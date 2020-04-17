@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Faktor extends Model
 {
+    public $table= 'Faktor';
+
     public function Kala()
     {
         return $this->belongsToMany(Kala::class, 'Faktor_Kala');

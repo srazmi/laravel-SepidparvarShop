@@ -5,6 +5,8 @@
 </head>
 <body>
 <!-- LOADER -->
+    @include('layouts.organiq.partials.loader')
+
     {{-- @yield('loader') --}}
 <!-- END LOADER -->
 <!-- START HEADER -->

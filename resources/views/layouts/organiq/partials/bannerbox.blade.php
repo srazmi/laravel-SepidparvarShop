@@ -8,7 +8,7 @@
               <div class="banner_box box_shadow4 radius_all_10">
                     <div class="banner_text">
                         <h3>{{ $kala->name }} </h3>
-                        <p>{{ $kala->description }}</p>
+                        <p>{!! $kala->short_description !!}</p>
                         <em><a href="#"><u>خریدکن</u></a></em>
                     </div>
                     <div class="banner_img">

@@ -1,6 +1,8 @@
 <?php
 
 use App\User;
+use App\Models\Roles;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +21,7 @@ use App\User;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/login', 'Auth\LoginController@Login')->name('login');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('role');
 
 //============================= دسته بندی محصولات ====================================
 Route::get('/', 'SiteController@ShowHomepage');

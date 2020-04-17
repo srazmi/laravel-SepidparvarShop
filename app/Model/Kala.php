@@ -47,4 +47,9 @@ class Kala extends Model
     {
         return $this->morphtoMany("App\Models\Tags","taggable");
     }
+
+    public function ShortDescription()
+    {
+        return Str::words($this->description,50,'...');
+    }
 }

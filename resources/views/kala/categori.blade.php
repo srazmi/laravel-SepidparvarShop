@@ -31,7 +31,7 @@
                 </div>
                 <div class="row shop_container grid_view">
                     <div class="col-lg-4 col-sm-6">
-                        @foreach ($Temp['kala_id'] as $kala)
+                        @foreach ($kala_id as $kala)
 
                         <div class="product">
                             <span class="pr_flash bg_green">فروش</span>
