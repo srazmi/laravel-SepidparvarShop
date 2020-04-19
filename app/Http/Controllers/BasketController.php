@@ -5,28 +5,32 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categori;
 use App\Models\Kala;
+use App\Models\Baskets;
+use App\User;
 
 class BasketController extends Controller
 {
     public function cart()
     {
-        $categori=Categori::all();
-        $kala=Kala::with('categori')->get();
-        // dd($kala);
-        $Temp['categori']=$categori;
-        $Temp['kala']= $kala;
-        return view ("basket.cart",compact('Temp'));
+        return view ("basket.cart");
 
     }
     public function checkout()
     {
-        $categori=Categori::all();
-        $kala=Kala::with('categori')->get();
-        // dd($kala);
-        $Temp['categori']=$categori;
-        $Temp['kala']= $kala;
-        return view ("basket.checkout",compact('Temp'));
+        return view ("basket.checkout");
 
+    }
+    public function AddToCart($id)
+    {
+        // dd($id);
+        $CurrentUser=User::findOrFail(auth()->id());
+        // dd($CurrentUser);
+        Baskets::add($id,$CurrentUser);
+        $Category=Categori::all();
+        $Product=Kala::all();
+        $T['Category']= $Category;
+        $T['Product']= $Product;
+        return redirect('basket.cart')->with('T', $T);   
     }
     
 }

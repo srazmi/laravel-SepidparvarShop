@@ -128,9 +128,9 @@
           <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="ion-ios-search-strong"></i></a>
               <div class="search-overlay">
                   <div class="search_wrap">
-                      <form>
+                      <form action="{{ Route('search') }}" method="GET" class="search-form">
                           <div class="rounded_input">
-                              <input type="text" placeholder="جستجو" class="form-control" id="search_input">
+                            <input type="text" name="query" value="{{ request()->input('query') }}" placeholder="جستجو" class="form-control" id="query">
                           </div>
                           <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
                       </form>

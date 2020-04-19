@@ -26,18 +26,22 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td class="product-thumbnail"><a href="#"><img src="assets/images/product_img1.jpg" alt="product1"></a></td>
-                            <td class="product-name" data-title="Product"><a href="#">توت فرنگی ارگانیک</a></td>
-                            <td class="product-price" data-title="Price">800 تومان</td>
-                            <td class="product-quantity" data-title="Quantity"><div class="quantity">
-                                <input type="button" value="-" class="minus">
-                                <input type="text" name="quantity" value="2" title="Qty" class="qty" size="4">
-                                <input type="button" value="+" class="plus">
-                            </div></td>
-                            <td class="product-subtotal" data-title="Total">800 تومان</td>
-                            <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
-                        </tr>
+                            @foreach ($T['Product'] as $item)
+                            @dd($item);
+                            <tr>
+                                <td class="product-thumbnail"><a href="#"><img src="assets/images/product_img1.jpg" alt="product1"></a></td>
+                                <td class="product-name" data-title="Product"><a href="#">{{$item->name}}</a></td>
+                                <td class="product-price" data-title="Price">800 تومان</td>
+                                <td class="product-quantity" data-title="Quantity"><div class="quantity">
+                                    <input type="button" value="-" class="minus">
+                                    <input type="text" name="quantity" value="2" title="Qty" class="qty" size="4">
+                                    <input type="button" value="+" class="plus">
+                                </div></td>
+                                <td class="product-subtotal" data-title="Total">800 تومان</td>
+                                <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
+                            </tr>
+                            @endforeach
+                        
                         <tr>
                             <td class="product-thumbnail"><a href="#"><img src="assets/images/product_img2.jpg" alt="product2"></a></td>
                             <td class="product-name" data-title="Product"><a href="#">انگور ارگانیک</a></td>

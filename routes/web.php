@@ -38,6 +38,11 @@ Route::get('/weblog', 'SiteController@weblog')->name('weblog');
 //====================================== سبد خرید =======================================
 Route::get('/cart', 'BasketController@cart')->name('cart');
 Route::get('/checkout', 'BasketController@checkout')->name('checkout');
+Route::get('/AddToCart/{id}', 'BasketController@AddToCart');
+
+//====================================== جستجوی محصولات ==================================
+Route::get('/search', 'SiteController@search')->name('search');
+
 
 
 

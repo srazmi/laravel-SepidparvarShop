@@ -11,7 +11,7 @@ class Kala extends Model
     public $table= 'Kala';
     public function Users()
     {
-        return $this->belongsToMany(Users::class, 'basket');
+        return $this->belongsToMany(Users::class, 'baskets');
     }
 
     public function Categori()
@@ -53,6 +53,8 @@ class Kala extends Model
     {
         return $this->morphtoMany("App\Models\Tags","taggable");
     }
+
+    //========================== Other Relations ===================================
 
     public function getShortDescriptionAttribute()
     {

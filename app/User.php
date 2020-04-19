@@ -54,7 +54,7 @@ class User extends Authenticatable
 
     public function Kala()
     {
-        return $this->belongsToMany(Kala::class, 'basket');
+        return $this->belongsToMany(Kala::class, 'baskets');
     }
 
     public function Comments()
@@ -72,6 +72,13 @@ class User extends Authenticatable
         return $this->belongsToMany(Roles::class, 'Roles_User');
     }
 
+    public function photos()
+    {    
+        return $this->morphMany('App\Models\Photos','imageable');
+    }
+     
+    //=========================== Other Relations ============================
+
     public function isAdmin()
     {
         if (isset($this->Roles[0])&&$this->Roles[0]->name=='admin'){
@@ -81,9 +88,4 @@ class User extends Authenticatable
         }
 
     }
-
-    public function photos()
-    {    
-        return $this->morphMany('App\Models\Photos','imageable');
-   }
 }
