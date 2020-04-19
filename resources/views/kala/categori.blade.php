@@ -1,15 +1,17 @@
 @extends('layouts.organiq.mastermain')
 @section('content')
 
+<nav aria-label="خرده نان">
+    <ol class="breadcrumb justify-content-right">
+        <li class="breadcrumb-item"><a href="/">صفحه اصلی</a>
+        <i class="fa fa-chevion-right"></i>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page"> دسته بندی محصولات</li>
+    </ol>
+</nav>
 <section>
     <div class="container">
         <div class="row">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center">
-                    <li class="breadcrumb-item"><a href="/">صفحه اصلی</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"> دسته بندی محصولات</li>
-                </ol>
-            </nav>
             <div class="col-lg-9">
                 <div class="row align-items-center justify-content-between pb-1 mb-4">
                     <div class="col-auto">
@@ -29,42 +31,41 @@
                         </div>
                     </div>
                 </div>
-                <div class="row shop_container grid_view">
-                    <div class="col-lg-4 col-sm-6">
-                        @foreach ($kala_id as $kala)
+                <div class="row shop_container grid_view">     
+                    @foreach ($kala_id as $kala)
 
-                        <div class="product">
-                            <span class="pr_flash bg_green">فروش</span>
-                            <div class="product_img">
-                                <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}" alt="product_img1"></a>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                        <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                        <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                    </ul>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="product">
+                                <span class="pr_flash bg_green">فروش</span>
+                                <div class="product_img">
+                                    <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}" alt="product_img1"></a>
+                                    <div class="product_action_box">
+                                        <ul class="list_none pr_action_btn">
+                                            <li><a href="#"><i class="ti-heart"></i></a></li>
+                                            <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
+                                            <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                    
+                                <div class="product_info">
+                                <h6><a href="#">{{ $kala->name }}</a></h6>
+                                    <div class="rating"><div class="product_rate" style="width:80%"></div></div>
+                                    <span class="price">{{ $kala->price }} </span>
+                                    <div class="pr_desc">
+                                    <p>{{ $kala->description }}</p>
+                                    </div>
+                                    <div class="product_action_box">
+                                        <ul class="list_none pr_action_btn">
+                                            <li class="add-to-cart"><a href="#"><i class="ti-shopping-cart"></i> افزودن به سبد خرید</a></li>
+                                            <li><a href="#"><i class="ti-heart"></i></a></li>
+                                            <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>                
                             </div>
-                                
-                            <div class="product_info">
-                            <h6><a href="#">{{ $kala->name }}</a></h6>
-                                <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                                <span class="price">{{ $kala->price }} </span>
-                                <div class="pr_desc">
-                                <p>{{ $kala->description }}</p>
-                                </div>
-                                <div class="product_action_box">
-                                    <ul class="list_none pr_action_btn">
-                                        <li class="add-to-cart"><a href="#"><i class="ti-shopping-cart"></i> افزودن به سبد خرید</a></li>
-                                        <li><a href="#"><i class="ti-heart"></i></a></li>
-                                        <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-            
                         </div>
-                        @endforeach
-                    </div>
+                    @endforeach
                 </div>
                 <div class="row">
                     <div class="col-12 mt-3 mt-lg-4">

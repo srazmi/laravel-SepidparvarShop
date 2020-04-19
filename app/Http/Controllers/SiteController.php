@@ -8,6 +8,7 @@ use App\Models\Kala;
 use App\Models\Faktor_Kala;
 use App\Models\Faktor;
 use App\Models\Roles;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -16,11 +17,38 @@ class SiteController extends Controller
     public function ShowHomepage()
     {
         // $product=Kala::with('faktor')->where('ptype_id', '=', 1)->get();
-        // $faktor= Faktor::where('ptype_id', '=', 1)->get();
-
-        // dd($product);
+        // $faktor= Faktor::where('faktorstate_id', '=', 2)->get();
         
-        return view('home');
+        // $total= Faktor_Kala::with('faktor')->sum('faktor_kala.num')->get();
+        // dd($total);
+        // $product=Kala::with('faktor_kala')->get();
+        // dd($product);
+        $faktor= Faktor::with('kala','faktor_kala')->where('faktorstate_id', '=', 2)->get();
+        // dd($faktor);
+        // $total= $faktor->faktor_kala()->get()->first()->num;
+        
+        // dd($total);
+        
+        // $T['product']= $product;
+        // $T['faktor']= $faktor;
+        // $Temp['total']= $total;
+        // foreach($faktor as $f)
+        // {
+        //     dd($f->faktor_kala()->get()->first()->num);
+        // }
+        // $count= count($faktor);
+        // $sales = DB::table('faktor_kala')
+        //     ->Join('faktor','faktor.id','=','faktor_kala.faktor_id')
+        //     ->join('kala','kala.id','=','faktor_kala.kala_id')
+        //     ->where('faktor.faktorstate_id', '=', 2)
+        //     ->selectRaw('kala.name,kala.description,kala.price, sum(faktor_kala.num) total')
+        //     ->groupBy('faktor_kala.kala_id','kala.name','kala.description','kala.price')
+        //     ->orderBy('total','desc')
+        //     ->take(5)
+        //     ->get();
+        // dd($faktor);
+        
+        return view('home',compact('faktor'));
     }
 
     public function ShowCategori($name , $id)

@@ -42,4 +42,9 @@ class Faktor extends Model
     {
         return $this->belongsToMany(Dargah_Pardakht::class, 'Transaction');
     }
+
+    public function Faktor_Kala()
+    {
+        return $this->hasMany('App\Models\Faktor_Kala');
+    }
 }

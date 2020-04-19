@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Kala extends Model
 {
@@ -32,6 +33,11 @@ class Kala extends Model
     {
         return $this->belongsToMany(Faktor::class, 'Faktor_Kala');
     }
+
+    public function Faktor_Kala()
+    {
+        return $this->hasMany('App\Models\Faktor_Kala');
+    }
     
     public function Backed_Kala()
     {
@@ -48,8 +54,8 @@ class Kala extends Model
         return $this->morphtoMany("App\Models\Tags","taggable");
     }
 
-    public function ShortDescription()
+    public function getShortDescriptionAttribute()
     {
-        return Str::words($this->description,50,'...');
+        return Str::limit($this->description, 21, '...');
     }
 }
