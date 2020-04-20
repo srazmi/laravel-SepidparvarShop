@@ -35,9 +35,9 @@ class SiteController extends Controller
     public function ShowCategori($name , $id)
     {
         // dd($id);
-        $kala_id=Kala::where('categori_id', $id)->get();
+        $categori_id=Kala::where('categori_id', $id)->get();
 
-        return view ('kala.categori',compact('kala_id'));
+        return view ('kala.categori',compact('categori_id'));
     }
 
     public function ShowSubcategori($categori ,$name ,$id)
@@ -69,7 +69,7 @@ class SiteController extends Controller
 
         $query= $request->input('query');           //get request from user
         // dd($query);
-        $products= Kala::where('name', 'LIKE', "%$query%")->paginate(6)
+        $products= Kala::where('name', 'LIKE', "%$query%")
                         ->orwhere('description', 'LIKE', "%$query%")
                         ->paginate(6);
 

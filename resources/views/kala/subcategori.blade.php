@@ -8,32 +8,35 @@
             <div class="col-lg-9">
                 <div class="row">
                     <div class="col-md-6">
+                        @foreach ($kala_id as $kala)
+
                         <div class="product-image">
                             <span class="pr_flash bg_green">فروش</span>
-                            <img id="product_img" src="{{asset('assets/images/product1.jpg')}}" alt="تولید - محصول" data-zoom-image="{{asset('assets/images/product1.jpg')}}">
+                            <img id="product_img" src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="تولید - محصول" data-zoom-image="{{ asset('/').$kala->photos()->get()->first()->path }}">
                             <div id="pr_item_gallery" class="product_gallery_item owl-thumbs-slider owl-carousel owl-theme">
                                 <div class="item">
-                                    <a href="#" class="active" data-image="{{asset('assets/images/product1.jpg')}}" data-zoom-image="{{asset('assets/images/product1.jpg')}}">
-                                        <img src="{{asset('assets/images/product_img1.jpg')}}" alt="تولید - محصول">
+                                    <a href="#" class="active" data-image="{{ asset('/').$kala->photos()->get()->first()->path }}" data-zoom-image="{{ asset('/').$kala->photos()->get()->first()->path }}">
+                                        <img src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="تولید - محصول">
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#" data-image="{{asset('assets/images/product1-1.jpg')}}" data-zoom-image="{{asset('assets/images/product1-1.jpg')}}">
-                                        <img src="{{asset('assets/images/product_img1-1.jpg')}}" alt="تولید - محصول">
+                                    <a href="#" data-image="{{ asset('/').$kala->photos()->get()->first()->path }}" data-zoom-image="{{ asset('/').$kala->photos()->get()->first()->path }}">
+                                        <img src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="تولید - محصول">
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#" data-image="{{asset('assets/images/product1-2.jpg')}}" data-zoom-image="{{asset('assets/images/product1-2.jpg')}}">
-                                        <img src="{{asset('assets/images/product_img1-2.jpg')}}" alt="تولید - محصول">
+                                    <a href="#" data-image="{{ asset('/').$kala->photos()->get()->first()->path }}" data-zoom-image="{{ asset('/').$kala->photos()->get()->first()->path }}">
+                                        <img src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="تولید - محصول">
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a href="#" data-image="{{asset('assets/images/product1-3.jpg')}}" data-zoom-image="{{asset('assets/images/product1-3.jpg')}}">
-                                        <img src="{{asset('assets/images/product_img1-3.jpg')}}" alt="تولید - محصول">
+                                    <a href="#" data-image="{{ asset('/').$kala->photos()->get()->first()->path }}" data-zoom-image="{{ asset('/').$kala->photos()->get()->first()->path }}">
+                                        <img src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="تولید - محصول">
                                     </a>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                     <div class="col-md-6">
                         <div class="pr_detail">
@@ -206,104 +209,36 @@
                         </div>
                         <div class="small_divider clearfix"></div>
                         <div class="product_slider carousel_slide3 owl-carousel owl-theme nav_top_right2" data-margin="30" data-nav="true" data-dots="false">
-                            <div class="item">
-                                <div class="product">
-                                    <span class="pr_flash bg_green">فروش</span>
-                                    <div class="product_img">
-                                        <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}" alt="product_img1"></a>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                            </ul>
+                            
+                            @foreach ($kala_id as $key)
+                                @foreach ($Temp['kala'] as $kala)
+
+                                    @if ($key->categori_id == $kala->categori_id && $key->id != $kala->id)
+                                    {{-- @dd($kala); --}}
+
+                                        <div class="item">
+                                            <div class="product">
+                                                <span class="pr_flash bg_green">فروش</span>
+                                                <div class="product_img">
+                                                    <a href="#"><img src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="product_img1"></a>
+                                                    <div class="product_action_box">
+                                                        <ul class="list_none pr_action_btn">
+                                                            <li><a href="#"><i class="ti-heart"></i></a></li>
+                                                            <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
+                                                            <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="product_info">
+                                                    <h6><a href="#">{{ $kala->name }}</a></h6>
+                                                    <div class="rating"><div class="product_rate" style="width:80%"></div></div>
+                                                    <span class="price">{{ $kala->price }} </span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6><a href="#">توت فرنگی ارگانیک تازه</a></h6>
-                                        <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                                        <span class="price">35.00 تومان</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product">
-                                    <span class="pr_flash bg_orange">-10٪</span>
-                                    <div class="product_img">
-                                        <a href="#"><img src="{{asset('assets/images/product_img2.jpg')}}" alt="product_img2"></a>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6><a href="#">انگورهای تازه آلی</a></h6>
-                                        <div class="rating"><div class="product_rate" style="width:80%"></div></div>
-                                        <span class="price">40.00 تومان</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="#"><img src="{{asset('assets/images/product_img3.jpg')}}" alt="product_img3"></a>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6><a href="#">خیار ارگانیک تازه</a></h6>
-                                        <div class="rating"><div class="product_rate" style="width:60%"></div></div>
-                                        <span class="price">52.00 تومان</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product">
-                                    <span class="pr_flash bg_green">فروش</span>
-                                    <div class="product_img">
-                                        <a href="#"><img src="{{asset('assets/images/product_img4.jpg')}}" alt="product_img4"></a>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6><a href="#">پرتقال ارگانیک تازه</a></h6>
-                                        <div class="rating"><div class="product_rate" style="width:100%"></div></div>
-                                        <span class="price">39.00 تومان</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="#"><img src="{{asset('assets/images/product_img5.jpg')}}" alt="product_img5"></a>
-                                        <div class="product_action_box">
-                                            <ul class="list_none pr_action_btn">
-                                                <li><a href="#"><i class="ti-heart"></i></a></li>
-                                                <li><a href="#"><i class="ti-shopping-cart"></i></a></li>
-                                                <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="product_info">
-                                        <h6><a href="#">100٪ آبهای ارگانیک</a></h6>
-                                        <div class="rating"><div class="product_rate" style="width:100%"></div></div>
-                                        <span class="price">33.00 تومان</span>
-                                    </div>
-                                </div>
-                            </div>
+                                    @endif
+                                @endforeach
+                            @endforeach
                         </div>
                     </div>
                 </div>

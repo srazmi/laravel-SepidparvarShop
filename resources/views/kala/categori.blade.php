@@ -32,13 +32,13 @@
                     </div>
                 </div>
                 <div class="row shop_container grid_view">     
-                    @foreach ($kala_id as $kala)
+                    @foreach ($categori_id as $kala)
 
                         <div class="col-lg-4 col-sm-6">
                             <div class="product">
                                 <span class="pr_flash bg_green">فروش</span>
                                 <div class="product_img">
-                                    <a href="#"><img src="{{asset('assets/images/product_img1.jpg')}}" alt="product_img1"></a>
+                                    <a href="#"><img src="{{ asset('/').$kala->photos()->get()->first()->path }}" alt="product_img1"></a>
                                     <div class="product_action_box">
                                         <ul class="list_none pr_action_btn">
                                             <li><a href="#"><i class="ti-heart"></i></a></li>
@@ -53,7 +53,7 @@
                                     <div class="rating"><div class="product_rate" style="width:80%"></div></div>
                                     <span class="price">{{ $kala->price }} </span>
                                     <div class="pr_desc">
-                                    <p>{{ $kala->description }}</p>
+                                    <p>{{ $kala->short_description }}</p>
                                     </div>
                                     <div class="product_action_box">
                                         <ul class="list_none pr_action_btn">

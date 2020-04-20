@@ -26,11 +26,11 @@
                         </tr>
                         </thead>
                         <tbody>
-                            @foreach ($T['Product'] as $item)
-                            @dd($item);
+                            {{-- @foreach ($Temp['Product'] as $item) --}}
+                            {{-- @dd($item); --}}
                             <tr>
                                 <td class="product-thumbnail"><a href="#"><img src="assets/images/product_img1.jpg" alt="product1"></a></td>
-                                <td class="product-name" data-title="Product"><a href="#">{{$item->name}}</a></td>
+                                <td class="product-name" data-title="Product"><a href="#"></a></td>
                                 <td class="product-price" data-title="Price">800 تومان</td>
                                 <td class="product-quantity" data-title="Quantity"><div class="quantity">
                                     <input type="button" value="-" class="minus">
@@ -40,7 +40,7 @@
                                 <td class="product-subtotal" data-title="Total">800 تومان</td>
                                 <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
                             </tr>
-                            @endforeach
+                            {{-- @endforeach --}}
                         
                         <tr>
                             <td class="product-thumbnail"><a href="#"><img src="assets/images/product_img2.jpg" alt="product2"></a></td>

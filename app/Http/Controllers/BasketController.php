@@ -20,17 +20,17 @@ class BasketController extends Controller
         return view ("basket.checkout");
 
     }
-    public function AddToCart($id)
-    {
-        // dd($id);
-        $CurrentUser=User::findOrFail(auth()->id());
-        // dd($CurrentUser);
-        Baskets::add($id,$CurrentUser);
-        $Category=Categori::all();
-        $Product=Kala::all();
-        $T['Category']= $Category;
-        $T['Product']= $Product;
-        return redirect('basket.cart')->with('T', $T);   
-    }
+    // public function AddToCart($id)
+    // {
+    //     // dd($id);
+    //     $CurrentUser=User::findOrFail(auth()->id());
+    //     // dd($CurrentUser);
+    //     Baskets::add($id,$CurrentUser);
+    //     $Category=Categori::all();
+    //     $Product=Kala::all();
+    //     $T['Category']= $Category;
+    //     $T['Product']= $Product;
+    //     return redirect('basket.cart')->with('T', $T);   
+    // }
     
 }

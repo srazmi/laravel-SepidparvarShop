@@ -15,7 +15,7 @@
 
                   <div class="banner_text">
                     <h3>{{ $key->name }} </h3>
-                    {{-- <p>{{ $p->short_description }}</p> --}}
+                    {{-- <p>{{ $key->short_description }}</p> --}}
                     <em><a href="{{asset('/').'AddToCart/'.$key->id}}"><u>خریدکن</u></a></em>
                   </div>
                   <div class="banner_img">
