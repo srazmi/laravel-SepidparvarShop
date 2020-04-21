@@ -41,4 +41,5 @@
         var sc_security = "35d2687e";
         var sc_https = 1;
     </script>
+
     <script src="{{asset('../../../www.statcounter.com/counter/counter.js')}}" async></script>

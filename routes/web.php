@@ -38,7 +38,7 @@ Route::get('/weblog', 'SiteController@weblog')->name('weblog');
 //====================================== سبد خرید =======================================
 Route::get('/cart', 'BasketController@cart')->name('cart');
 Route::get('/checkout', 'BasketController@checkout')->name('checkout');
-Route::get('/category/add-to-cart/{id}','BasketController@AddToCart');
+Route::get('/add-to-cart','BasketController@AddToCart');
 
 
 

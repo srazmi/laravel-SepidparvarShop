@@ -20,11 +20,12 @@ class BasketController extends Controller
     {
         return view ("basket.checkout");
     }
-    public function AddToCart($id)
+    public function AddToCart(Request $request)
     {
 
         $CurrentUser=User::find(auth()->id());
-        Baskets::AddToBasket($id,1);
+        dd($request->id);
+        Baskets::AddToBasket($request->id,1);
         return view('Product.category');   
     }
 }

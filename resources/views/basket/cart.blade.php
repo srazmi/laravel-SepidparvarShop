@@ -39,10 +39,10 @@
                             </div></td>
                             <?php $price=$item->Product()->get()->first()->price;
                             $num=$item->num;
-                            $total=$price*$num;
+                            // $total=$price*$num;
                             ?>
                             
-                            <td class="product-subtotal" data-title="Total">{{ $total }} </td>
+                            <td class="product-subtotal" data-title="Total"> </td>
                             <td class="product-remove" data-title="Remove"><a href="#"><i class="ti-close"></i></a></td>
                         </tr>
                         @endforeach
