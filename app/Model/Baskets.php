@@ -8,7 +8,7 @@ class Baskets extends Model
 {
     public $timestamps=false;
     
-    protected $fillable=['num','product_id','user_id'];
+    protected $fillable=['num','product_id','user_id','created_at','updated_at'];
 
     public function Product()
     {
@@ -27,13 +27,13 @@ class Baskets extends Model
         if($result)
         {            
             $result->increment('num');
+            $result->uapdated_at=now();
             $result->save();
         }
         else
         {
-            //dd($result);die;
             Baskets::add($product_id,$user_id);
-             
+ 
         }
     }
 
@@ -51,6 +51,8 @@ class Baskets extends Model
         $addproduct->product_id=$product_id;
         $addproduct->user_id=$user_id;
         $addproduct->num=1;
+        $addproduct->created_at=now();
+        // $addproduct->uapdated_at=now();
         $addproduct->save();
     }
 

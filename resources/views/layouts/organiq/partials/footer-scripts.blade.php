@@ -1,5 +1,19 @@
 <!-- JS Part Start-->
 <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
+
+<!-- jquery dd js  -->
+<script src="{{asset('assets/js/jquery.dd.min.js')}}"></script>
+<!-- countdown js  -->
+<script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
+<!-- jquery.counterup.min js -->
+<script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+<!-- jquery.parallax-scroll js -->
+<script src="{{asset('assets/js/jquery.parallax-scroll.js')}}"></script>
+<!-- elevatezoom js -->
+<script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
+<!-- fit video  -->
+<script src="{{asset('assets/js/jquery.fitvids.js')}}"></script>
+
 <!-- Latest jQuery -->
 <script src="{{asset('assets/js/jquery-1.12.4.min.js')}}"></script>
 <!-- jquery-ui -->
@@ -16,18 +30,7 @@
 <script src="{{asset('assets/js/waypoints.min.js')}}"></script>
 <!-- parallax js  -->
 <script src="{{asset('assets/js/parallax.js')}}"></script>
-<!-- jquery dd js  -->
-<script src="{{asset('assets/js/jquery.dd.min.js')}}"></script>
-<!-- countdown js  -->
-<script src="{{asset('assets/js/jquery.countdown.min.js')}}"></script>
-<!-- jquery.counterup.min js -->
-<script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
-<!-- jquery.parallax-scroll js -->
-<script src="{{asset('assets/js/jquery.parallax-scroll.js')}}"></script>
-<!-- elevatezoom js -->
-<script src="{{asset('assets/js/jquery.elevatezoom.js')}}"></script>
-<!-- fit video  -->
-<script src="{{asset('assets/js/jquery.fitvids.js')}}"></script>
+
 <!-- imagesloaded js -->
 <script src="{{asset('assets/js/imagesloaded.pkgd.min.js')}}"></script>
 <!-- isotope min js -->

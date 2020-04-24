@@ -22,10 +22,9 @@ class BasketController extends Controller
     }
     public function AddToCart(Request $request)
     {
+        $CurrentUserid= $request->user()->id; 
+        Baskets::AddToBasket($request->id,$CurrentUserid);
+        return response()->json([$CurrentUserid]);
 
-        $CurrentUser=User::find(auth()->id());
-        dd($request->id);
-        Baskets::AddToBasket($request->id,1);
-        return view('Product.category');   
     }
 }

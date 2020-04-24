@@ -49,7 +49,7 @@
                                 </div>
                                     
                                 <div  class="product_info">
-                                <h6><a id="pid" value="{{$product->id}}" href="#">{{ $product->name }}</a></h6>
+                                <h6><a   href="#">{{ $product->name }}</a></h6>
                                     <div class="rating"><div class="product_rate" style="width:80%"></div></div>
                                     <span class="price">{{ $product->price }} </span>
                                     <div class="pr_desc">
@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="product_action_box">
                                         <ul class="list_none pr_action_btn">
-                                            <li class="add-to-cart"><a id="addtocart" ><i class="ti-shopping-cart"></i> افزودن به سبد خرید</a></li>
+                                            <li class="add-to-cart"><a data-id="{{$product->id}}" class="addcart" value="{{$product->id}}" ><i class="ti-shopping-cart"></i> افزودن به سبد خرید</a></li>
                                             <li><a href="#"><i class="ti-heart"></i></a></li>
                                             <li><a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="ti-eye"></i></a></li>
                                         </ul>
@@ -110,7 +110,7 @@
                         <ul class="recent_post border_bottom_dash list_none">
                             <li>
                                 <div class="post_img">
-                                    <a href="#"><img src="assets/images/shop_small1.jpg" alt="shop_small1"></a>
+                                    <a href="#"><img src="{{asset('assets/images/shop_small1.jpg')}}" alt="shop_small1')}}"></a>
                                 </div>
                                 <div class="post_content">
                                     <h6><a href="#">میوه 100% ارگانیک</a></h6>
@@ -120,7 +120,7 @@
                             </li>
                             <li>
                                 <div class="post_img">
-                                    <a href="#"><img src="assets/images/shop_small2.jpg" alt="shop_small2"></a>
+                                    <a href="#"><img src="{{asset('assets/images/shop_small2.jpg')}}" alt="shop_small2"></a>
                                 </div>
                                 <div class="post_content">
                                     <h6><a href="#">میوه های تازه</a></h6>
@@ -130,7 +130,7 @@
                             </li>
                             <li>
                                 <div class="post_img">
-                                    <a href="#"><img src="assets/images/shop_small3.jpg" alt="shop_small3"></a>
+                                    <a href="#"><img src="{{asset('assets/images/shop_small3.jpg')}}" alt="shop_small3"></a>
                                 </div>
                                 <div class="post_content">
                                     <h6><a href="#">محصولات ارگانیک</a></h6>
@@ -158,27 +158,32 @@
         </div>
     </div>
 </section>
-<script>
-    jQuery(document).ready(function(){
-        jQuery('#addtocart').click(function(e){
-            e.preventDefault();
-            $.ajaxSetup({
-                headers:{
-                    'X-CSRF-TOKEN':$('meta[name="_token"]').attr('content')
-                }
-            });
-            jQuery.ajax({
-                url:"{{url('/add-to-cart')}}",
-                method:'post',
-                data:{
-                    id:jQuery('#pid').val()
-                },
-                success:function(result){
-                    console.log(result);
-                }
+<script type="text/javascript">
 
-            });
+    $(document).ready(function(){
         
+        $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+            });
+            $(".addcart").click(function(){
+                var id = $(this).attr('data-id');
+                // alert(id);
+
+                $.ajax({
+                    url: '/add-to-cart',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {id:id},
+                    success:function(data)
+                    {
+                        alert('محصول با موفقیت به سبد خرید اضافه شد');
+                    }
+                    // error: function (XMLHttpRequest,textStatus, errorthrown){
+                    //     console.log('AJAX error:' + errorthrown);
+                    // }
+            });
         });
     });
 </script>

@@ -13,9 +13,9 @@
     <!-- Latest Bootstrap min CSS -->
     <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
     <!-- Google Font -->
-    <link href="{{asset('../../../external.html?link=https://fonts.googleapis.com/css?family=Lobster+Two:400,700')}}"
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Lobster+Two:400,700')}}"
           rel="stylesheet">
-    <link href="{{asset('../../../external.html?link=https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900')}}"
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900')}}"
           rel="stylesheet">
     <!-- Icon Font CSS -->
     <link rel="stylesheet" href="{{asset('assets/css/ionicons.min.css')}}">
@@ -41,5 +41,8 @@
         var sc_security = "35d2687e";
         var sc_https = 1;
     </script>
-
-    <script src="{{asset('../../../www.statcounter.com/counter/counter.js')}}" async></script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Latest jQuery -->
+    <script src="{{asset('assets/js/jquery-1.12.4.min.js')}}"></script>
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+    <!-- <script src="http://www.statcounter.com/counter/counter.js" async></script> -->

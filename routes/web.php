@@ -25,8 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('role');
 
 //============================= دسته بندی محصولات ====================================
 Route::get('/', 'SiteController@ShowHomepage');
-Route::get('/category/{name}/{id}', 'SiteController@ShowCategori');
-Route::get('/category/{categori}/{name}/{id}', 'SiteController@ShowSubcategori');
+Route::get('/category/{name}/{id}', 'SiteController@ShowCategory');
+Route::get('/category/{categori}/{name}/{id}', 'SiteController@ShowSubcategory');
 
 //====================================== درباره ما و ارتباط با ما  =====================================
 Route::get('/aboutus', 'SiteController@aboutus')->name('aboutus');
@@ -38,7 +38,7 @@ Route::get('/weblog', 'SiteController@weblog')->name('weblog');
 //====================================== سبد خرید =======================================
 Route::get('/cart', 'BasketController@cart')->name('cart');
 Route::get('/checkout', 'BasketController@checkout')->name('checkout');
-Route::get('/add-to-cart','BasketController@AddToCart');
+Route::post('add-to-cart','BasketController@AddToCart');
 
 
 

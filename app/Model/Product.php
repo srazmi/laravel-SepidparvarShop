@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -30,8 +31,7 @@ class Product extends Model
 
     public function Factor()
     {
-        return $this->belongsToMany(Factor::class, 'Factor_Product
-        ');
+        return $this->belongsToMany(Factor::class, 'Factor_Product');
     }
 
     public function Factor_Product()
@@ -45,7 +45,7 @@ class Product extends Model
         return $this->hasMany('App\Model\Backed_Product');
     }
 
-    public function photos()
+    public function photoes()
     {    
         return $this->morphMany('App\Model\Photoes','imageable');
     }
@@ -55,8 +55,8 @@ class Product extends Model
         return $this->morphtoMany("App\Model\Tags","taggable");
     }
 
-    public function getShortDescriptionAttribute()
+    public function getShortDescription()
     {
-        // return Str::limit($this->description, 21, '...');
+        return Str::limit($this->description, 15, '...');
     }
 }

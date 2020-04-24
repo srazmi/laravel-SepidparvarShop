@@ -7,6 +7,8 @@ use App\Model\Category;
 use App\Model\Product;
 use App\Model\Factor_Product;
 use App\Model\Factor;
+use App\Model\Taggables;
+use App\Query;
 use App\Model\Roles;
 use Illuminate\Support\Facades\DB;
 
@@ -17,18 +19,25 @@ class SiteController extends Controller
     public function ShowHomepage()
     {
 
-        $factor= Factor::with('product','factor_product')->where('factorstate_id', '=', 2)->get();
         
-
-        return view('home',compact('factor'));
+        $BestSoldProduct_id = Query::BestSoldeAllProducts();
+        $BestSoldProduct=array();
+            
+        foreach($BestSoldProduct_id as $product_id)
+        {
+            array_push($BestSoldProduct,Product::where('id',$product_id->product_id)->first()); 
+        }
+        return view('home',compact('BestSoldProduct'));
     }
-    public function ShowCategori($name , $id)
+
+
+    public function ShowCategory($name , $id)
     {
     
         $product_id=Product::where('category_id', $id)->get();
         return view ('product.category',compact('product_id'));
     }
-    public function ShowSubcategori($category ,$name ,$id)
+    public function ShowSubcategory($category ,$name ,$id)
     {
     
         $product_id=Product::where('id', $id)->get();

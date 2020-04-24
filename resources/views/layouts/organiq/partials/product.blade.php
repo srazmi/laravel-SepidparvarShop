@@ -48,8 +48,8 @@
                           <div class="row animation" data-animation="fadeInUp" data-animation-delay="0.05s">
                             
                               <div class="col-xl-3 col-lg-4 col-sm-6">
-                                @foreach ($Temp['Product'] as $product)
-                                @if ($category->id == $product->category_id)
+                                @foreach ($BestSoldProduct as $product)
+                                <!-- @if ($category->id == $product->category_id) -->
                                   <div class="product">
                                     
                                       <span class="pr_flash bg_green">فروش</span>
@@ -74,7 +74,7 @@
                                       </div>
                                                               
                                   </div>
-                                  @endif
+                                  <!-- @endif -->
                                   @endforeach    
                               </div>
                               

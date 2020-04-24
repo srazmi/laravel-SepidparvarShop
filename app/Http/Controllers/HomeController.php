@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Category;
 use App\Model\Product;
+use App\Models\Taggables;
 
 class HomeController extends Controller
 {
@@ -25,11 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $category=Category::all();
-        $kala=Product::with('category')->get();
-        // dd($kala);
-        $Temp['category']=$category;
-        $Temp['kala']= $kala;
-        return view ("home",compact('Temp')); 
+        
+        return view ("home"); 
     }
 }
