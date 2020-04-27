@@ -9,6 +9,9 @@ class Product extends Model
 {
     public $timestamps = false;
     public $table= 'products';
+    protected $fillable = [
+       'id', 'name', 'description','category_id', 'price', 'number',
+    ];
     public function Users()
     {
         return $this->belongsToMany(Users::class, 'baskets');

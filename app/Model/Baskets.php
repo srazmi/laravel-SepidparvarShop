@@ -52,7 +52,7 @@ class Baskets extends Model
         $addproduct->user_id=$user_id;
         $addproduct->num=1;
         $addproduct->created_at=now();
-        // $addproduct->uapdated_at=now();
+        $addproduct->updated_at=now();
         $addproduct->save();
     }
 

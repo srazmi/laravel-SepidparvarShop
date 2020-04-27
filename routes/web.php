@@ -41,6 +41,16 @@ Route::get('/checkout', 'BasketController@checkout')->name('checkout');
 Route::post('add-to-cart','BasketController@AddToCart');
 
 
+//====================================== Admin Start ====================================
+
+    // Route::get('alluserdatatabels', 'UsersController@alluserdatatabels')->name('users.alluserdatatabels');
+    // Route::get('/alluserdatatabels', 'UserController@alluserdatatabels')->name('users.alluserdatatabels');
+    Route::post('/productadd', 'Admin\ProductsController@store');
+    Route::resource('/users', 'Admin\UsersController');
+    Route::resource('/products', 'Admin\ProductsController');
+
+ 
+
 
 
 
