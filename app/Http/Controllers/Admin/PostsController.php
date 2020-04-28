@@ -4,23 +4,21 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Product;
-use App\Model\Category;
+use App\Model\Posts;
 
-class ProductsController extends Controller
+
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function index()
     {
-        $products = Product::with('category')->get();
+        $posts = Posts::all();
         // dd($users);
-        return view('layouts.Admin.Products.ShowProduct',compact('products'));
+        return view('layouts.Admin.Posts.ShowPosts',compact('posts'));
     }
 
     /**
@@ -42,25 +40,20 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required | string',
-            'description'=>'required | string' ,
-            'price'=>'required',
-            'number'=>'required',
-            
+            'title'=>'required | string',
+            'content'=>'required | string' ,    
         ]);
-        $products= new Product;
+        $posts= new Posts;
         
-        $products->id=$request->input('id');
-        $products->name=$request->input('name');
-        $products->description=$request->input('description');
-        $products->category_id=$request->input('category');
-        $products->price=$request->input('price');
-        $products->number=$request->input('number');
+        // $posts->id=$request->input('id');
+        $posts->title=$request->input('title');
+        $posts->content=$request->input('content');
+        $posts->created_at=$request->input('created_at');
+        $posts->updated_at=$request->input('updated_at');
+// dd($posts);
+        $posts->save();
 
-        $products->save();
-
-        return response()->json([$products]);
-
+        return response()->json([$posts]);
     }
 
     /**
@@ -98,18 +91,13 @@ class ProductsController extends Controller
         $num = range(0, 9);
         $convertedPersianNums = str_replace($persian, $num, $id);  //Convert Persian Numbers to English Numbers
        
-        $products= Product::find($convertedPersianNums);
-        
-        $category_id = Category::where('persian_name',$request->input('category'))->select("id")->get()->first()->id;
-// dd($request);
-        $products->name = $request->input('name');    
-        $products->description = $request->input('description');
-        $products->category_id = $category_id;
-        $products->price = $request->input('price');
-        $products->number = $request->input('number');
+        $posts= Posts::find($convertedPersianNums);
 
-        $products->save();
-        return response()->json([$products]);
+        $posts->title = $request->input('title');    
+        $posts->content = $request->input('content');
+
+        $posts->save();
+        return response()->json([$posts]);
     }
 
     /**
@@ -124,11 +112,10 @@ class ProductsController extends Controller
         $num = range(0, 9);
         $convertedPersianNums = str_replace($persian, $num, $request->id);  //Convert Persian Numbers to English Numbers
         
-        $products= Product::find($convertedPersianNums);
-        // dd($products);
-        $products->delete();
+        $posts= Posts::find($convertedPersianNums);
+        // dd($posts);
+        $posts->delete();
 
-        return response()->json([$products]);
-        
+        return response()->json([$posts]);
     }
 }

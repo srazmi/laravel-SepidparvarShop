@@ -84,10 +84,21 @@
                   <p>مشاهده لیست محصولات</p>
                 </a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                مدیریت  پست ها
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{'/users'}}" class="nav-link">
+                <a href="{{'/posts'}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p> اضافه کردن محصولات</p>
+                  <p>مشاهده پست ها</p>
                 </a>
               </li>
             </ul>
@@ -96,15 +107,15 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-book"></i>
               <p>
-                مدیریت نظرات کاربران
+                مدیریت  کامنت ها
                 <i class="fa fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{'/users'}}" class="nav-link">
+                <a href="{{'/posts'}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
-                  <p>مشاهده لیست نظرات</p>
+                  <p>مشاهده کامنت ها</p>
                 </a>
               </li>
             </ul>

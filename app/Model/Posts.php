@@ -1,16 +1,18 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Posts extends Model
 {
-    protected $fillable = [
-        'title','content'
-    ];
+    public $timestamps = false;
+    public $table= 'posts';
+    // protected $fillable = [
+    //     'title','content'
+    // ];
     
-    public function photos()
+    public function photoes()
     {
         return $this->morphMany("App\Model\Photoes","imageable");
     }

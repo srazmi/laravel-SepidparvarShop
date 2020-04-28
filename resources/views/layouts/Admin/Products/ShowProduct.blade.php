@@ -235,7 +235,7 @@
   </div>
   <!-- ./wrapper -->
 
-{{-- Edit Script --}}
+{{-- Product Edit Script --}}
 <script>
     $(document).ready(function(){
         $('.editbtn').on('click', function(){
@@ -282,9 +282,9 @@
         });
     });
 </script>
-{{-- End of Edit Script --}}
+{{-- End of Product Edit Script --}}
 
-{{-- Delete Script --}}
+{{-- Product Delete Script --}}
 <script>
     $('.deletebtn').on('click', function(){
         $('#productDeleteModal').modal('show');
@@ -324,9 +324,9 @@
         });
     });
 </script>
-{{-- End of Delete Script --}}
+{{-- End of Product Delete Script --}}
 
-{{-- Insert Script --}}
+{{-- Product Insert Script --}}
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -360,7 +360,7 @@
             });
         });
 </script>  
-{{-- End of Insert Script --}}
+{{-- End of Product Insert Script --}}
 
 @endsection
 

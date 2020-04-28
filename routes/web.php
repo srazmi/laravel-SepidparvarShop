@@ -42,11 +42,21 @@ Route::post('add-to-cart','BasketController@AddToCart');
 
 
 //====================================== Admin Start ====================================
+    // Routes Users Management
+    Route::resource('/users', 'Admin\UsersController');
+
+    // Routes Products Management
     Route::post('/productadd', 'Admin\ProductsController@store');
     Route::put('/productupdate/{id}', 'Admin\ProductsController@update');
     Route::delete('/productdelete/{id}', 'Admin\ProductsController@destroy');
-    Route::resource('/users', 'Admin\UsersController');
     Route::resource('/products', 'Admin\ProductsController');
+
+    // Routes Posts Management
+    Route::post('/postadd', 'Admin\PostsController@store');
+    Route::put('/postupdate/{id}', 'Admin\PostsController@update');
+    Route::delete('/postdelete/{id}', 'Admin\PostsController@destroy');
+    Route::resource('/posts', 'Admin\PostsController');
+
 
  
 
