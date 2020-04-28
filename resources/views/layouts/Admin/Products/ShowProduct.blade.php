@@ -78,9 +78,41 @@
     </div>
     </div>
 </div>
+<!--End of Edit Product Modal -->
+
+<!--Delete Product Modal -->
+<div class="modal fade" id="productDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> حذف محصول</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <form id="DeleteFormID">
+            <div class="modal-body">
+                {{ csrf_field() }}
+                {{ method_field('delete') }}
+
+                <div class="form-group">
+                    <input type="hidden" class="form-control" name="id" id="delete_id" >
+                    <p>Are you Sure !!</p>
+                </div>
+
+            </div>
+            <div class="modal-footer bg-danger">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+                <button type="submit" class="btn btn-primary"> حذف  </button>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+<!--End of Delete Product Modal -->
   
-  <!--Add Product Data Modal -->
-  <div class="modal fade" id="productaddmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--Add Product Data Modal -->
+<div class="modal fade" id="productaddmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
@@ -131,6 +163,7 @@
     </div>
     </div>
 </div>
+<!--End of Add Product Data Modal -->
 
       <!-- Main content -->
       <section class="content">
@@ -171,7 +204,7 @@
                             <a href="#" class="btn btn-primary btn-success editbtn" data-toggle="modal" data-target="#productEditModal">
                                 ویرایش
                             </a>
-                            <a href="#" class="btn btn-primary btn-success deletebtn" data-toggle="modal" data-target="#productEditModal">
+                            <a href="#" class="btn btn-primary btn-danger deletebtn" data-toggle="modal" data-target="#productDeleteModal">
                                 حذف 
                             </a>
                         </td>
@@ -202,8 +235,8 @@
   </div>
   <!-- ./wrapper -->
 
+{{-- Edit Script --}}
 <script>
-
     $(document).ready(function(){
         $('.editbtn').on('click', function(){
             $('#productEditModal').modal('show');
@@ -228,7 +261,7 @@
             e.preventDefault();
 
             var id = $('#id').val();
-// alert(id);
+
             $.ajax({
                 type: "PUT",
                 url: "productupdate/"+id,
@@ -237,7 +270,6 @@
                 success: function(response)
                 {
                     console.log(response)
-                    // alert(id);
                     $('#productEditModal').modal('hide')
                     alert('ویرایش با موفقیت انجام شد');
                     location.reload();
@@ -250,7 +282,51 @@
         });
     });
 </script>
+{{-- End of Edit Script --}}
 
+{{-- Delete Script --}}
+<script>
+    $('.deletebtn').on('click', function(){
+        $('#productDeleteModal').modal('show');
+
+        $tr = $(this).closest("tr");
+
+        var data = $tr.children("td").map(function(){
+            return $(this).text();
+        }).get();
+
+        console.log(data);
+
+        $('#delete_id').val(data[0]);
+    });
+
+    $('#DeleteFormID').on('submit', function(e){
+        e.preventDefault();
+
+        var id = $('#delete_id').val();
+
+        $.ajax({
+            type: "delete",
+            url: "productdelete/"+id,
+            dataType: 'json',
+            data: $('#DeleteFormID').serialize(),
+            success: function(response)
+            {
+                console.log(response)
+                $('#productDeleteModal').modal('hide')
+                alert('محصول حذف شد');
+                location.reload();
+            },
+            error: function(error)
+            {
+                console.log(error)
+            }
+        });
+    });
+</script>
+{{-- End of Delete Script --}}
+
+{{-- Insert Script --}}
 <script type="text/javascript">
 
     $(document).ready(function(){
@@ -284,6 +360,7 @@
             });
         });
 </script>  
+{{-- End of Insert Script --}}
 
 @endsection
 

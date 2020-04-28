@@ -94,13 +94,14 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // dd(parseInt($request->id));
-        // dd(($request->$request->input('id')));
-        $products= Product::find(3);
-        $category_id = Category::find($id->category);
-
-dd($category_id);
-        // $products->id=$request->input('id');
+        $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        $num = range(0, 9);
+        $convertedPersianNums = str_replace($persian, $num, $id);  //Convert Persian Numbers to English Numbers
+       
+        $products= Product::find($convertedPersianNums);
+        
+        $category_id = Category::where('persian_name',$request->input('category'))->select("id")->get()->first()->id;
+// dd($category_id);
         $products->name = $request->input('name');    
         $products->description = $request->input('description');
         $products->category_id = $category_id;
@@ -108,6 +109,7 @@ dd($category_id);
         $products->number = $request->input('number');
 
         $products->save();
+        return response()->json([$products]);
     }
 
     /**
@@ -116,8 +118,17 @@ dd($category_id);
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        $num = range(0, 9);
+        $convertedPersianNums = str_replace($persian, $num, $request->id);  //Convert Persian Numbers to English Numbers
+        
+        $products= Product::find($convertedPersianNums);
+        // dd($products);
+        $products->delete();
+
+        return response()->json([$products]);
+        
     }
 }

@@ -42,11 +42,9 @@ Route::post('add-to-cart','BasketController@AddToCart');
 
 
 //====================================== Admin Start ====================================
-
-    // Route::get('alluserdatatabels', 'UsersController@alluserdatatabels')->name('users.alluserdatatabels');
-    // Route::get('/alluserdatatabels', 'UserController@alluserdatatabels')->name('users.alluserdatatabels');
-    Route::put('/productupdate/{id}', 'Admin\ProductsController@update');
     Route::post('/productadd', 'Admin\ProductsController@store');
+    Route::put('/productupdate/{id}', 'Admin\ProductsController@update');
+    Route::delete('/productdelete/{id}', 'Admin\ProductsController@destroy');
     Route::resource('/users', 'Admin\UsersController');
     Route::resource('/products', 'Admin\ProductsController');
 
