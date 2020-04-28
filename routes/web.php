@@ -45,6 +45,7 @@ Route::post('add-to-cart','BasketController@AddToCart');
 
     // Route::get('alluserdatatabels', 'UsersController@alluserdatatabels')->name('users.alluserdatatabels');
     // Route::get('/alluserdatatabels', 'UserController@alluserdatatabels')->name('users.alluserdatatabels');
+    Route::put('/productupdate/{id}', 'Admin\ProductsController@update');
     Route::post('/productadd', 'Admin\ProductsController@store');
     Route::resource('/users', 'Admin\UsersController');
     Route::resource('/products', 'Admin\ProductsController');

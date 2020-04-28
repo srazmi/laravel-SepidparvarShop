@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Model\Product;
+use App\Model\Category;
 
 class ProductsController extends Controller
 {
@@ -93,7 +94,20 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd(parseInt($request->id));
+        // dd(($request->$request->input('id')));
+        $products= Product::find(3);
+        $category_id = Category::find($id->category);
+
+dd($category_id);
+        // $products->id=$request->input('id');
+        $products->name = $request->input('name');    
+        $products->description = $request->input('description');
+        $products->category_id = $category_id;
+        $products->price = $request->input('price');
+        $products->number = $request->input('number');
+
+        $products->save();
     }
 
     /**
